@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Page Title</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="/css/main.css">
 <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
 <style>
 </style>
@@ -27,8 +27,8 @@
                         <i class="far fa-user"></i>
                     </a>
                     <div class="dropdown-content"> 
-                        <a href="login.php", class="droplist">Login</a>
-                        <a href="getinvolved.php", class="droplist">Get Involved</a>
+                        <a href="login.php", id="drop1">Login</a>
+                        <a href="getinvolved.php", id="drop2">Get Involved</a>
                     </div> 
                 </li>
                 

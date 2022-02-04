@@ -1,41 +1,4 @@
-relevant styling
-body { overflow-x: hidden; } /* trick from css-tricks comments */
-
-/* FIRST LEVEL */
-
-.nav-container > ul > li { 
-  display: inline-block; 
-  position: relative; 
-  padding: 3px 10px 3px 0;
-  z-index: 100;
-}
-
-/* SECOND LEVEL */
-.nav-container > ul > li > ul {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  padding: 0 1000em; /* trick from css-tricks comments */
-  margin: 0 -1000em; /* trick from css-tricks comments */
-  z-index: 101;
-  visibility: hidden;
-  opacity: 0;
-  background: rgba(255, 240, 240, 0.8);
-}
-
-.nav-container > ul > li:hover > ul {
-  visibility: visible;
-  opacity: 1;
-}
-
-.nav-container > ul > li > ul > li {
-  padding: 3px 0;
-}
-
-.nav-container > ul > li:hover .drop {
-  font-weight: bold;
-}
-/* ul {
+ul {
     list-style-type:none;
     margin: 0;
     padding: 0;
@@ -85,7 +48,7 @@ body { overflow-x: hidden; } /* trick from css-tricks comments */
 
 #drop1{
   width:130px;
-} */
+}
 
 a{
     text-decoration: none;
