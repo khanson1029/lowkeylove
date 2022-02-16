@@ -7,7 +7,7 @@ ul {
   }
     
   li a, .dropbtn {
-    display: flex;
+    display: block;
     flex-direction: column;
     color: white;
     text-align: center;
@@ -15,12 +15,21 @@ ul {
     text-decoration: none;
   }
   
-
   
   li.dropdown {
     display:block;
   }
   
+  div a, .drop1{
+    width: 100%;
+    position: left;
+  }
+  
+  div a, .drop2{
+    position: left;
+    width: 10%;
+  }
+
   .dropdown-content {
     display:none;
     position:absolute;
@@ -30,25 +39,21 @@ ul {
     z-index: 2;
   }
   
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block; 
-  }
-  
  
   .dropdown-content a:hover {background-color: #f1f1f1;}
   
   .dropdown:hover .dropdown-content {
-    display: inline;
-    position:fixed;
-    
+    display:contents;
+    width: auto;
   }
 
-#drop1{
-  width:130px;
-}
+  .dropdown-content > .drop1{
+    display:block;
+  }
+
+  .dropdown-content > .drop2{
+    display: block;
+  }
 
 a{
     text-decoration: none;
@@ -97,7 +102,7 @@ body{
     flex-shrink: 1;
     stroke-width: 6;
 }
-.navbar a{
+.navbar li{
     font-family: "Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;;
     flex:1;
     flex-wrap: wrap;
@@ -107,14 +112,21 @@ body{
 }
 
 
+
 .post-title{
     font-family: "Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 0;
-    margin: 10px;
-    list-style: none;
+    justify-content: center;
+    font-size: 60px;
+    
+}
+
+.post-title > a{
+  font-family: "Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 60px;
 }
 
 #logo-main {
@@ -130,4 +142,253 @@ body{
 
 .nav-items .navitem1{
     padding-left: 15px;
+}
+
+.pdf-object-container{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: none;
+  height: 1000px;
+  width: 70%;
+}
+
+.tip {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  background: transparent;
+  border: 10px solid #ccc;
+}
+
+.comment-box{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tip-up {
+  top: -25px; 
+  left: 10px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.tip-down {
+  bottom: -25px;
+  left: 10px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;  
+}
+
+.tip-left {
+  top: 10px;
+  left: -25px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;  
+}
+
+.tip-right {
+  top: 10px;
+  right: -25px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;  
+}
+
+.dialogbox .body {
+  position: relative;
+  max-width: 600px;
+  height: auto;
+  margin: 20px 10px;
+  padding: 5px;
+  background-color: #DADADA;
+  border-radius: 3px;
+  border: 5px solid #ccc;
+}
+
+.body .message {
+  min-height: 30px;
+  border-radius: 3px;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #797979;
+}
+
+.footer {
+  margin-top: 40px;
+  background-color: #5b5c5e;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  color: #c9b351;;
+  font-family: 'Open Sans',Arial,Helvetica,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.footer-block .social-links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+/* css for music player*/
+.audio-player {
+  height: 50px;
+  width: 350px;
+  background: #444;
+  box-shadow: 0 0 20px 0 #000a;
+  font-family: arial;
+  color: white;
+  font-size: 0.75em;
+  overflow: hidden;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-rows: 6px auto;
+}
+.audio-player .timeline {
+  background: white;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 10px 0 #0008;
+}
+
+.audio-player .timeline .progress {
+  background: coral;
+  width: 0%;
+  height: 100%;
+  transition: 0.25s;
+}
+
+.audio-player .controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0 20px;
+}
+.audio-player .controls > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-player .controls .toggle-play.play {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid #0000;
+  border-left: 13px solid white;
+}
+.audio-player .controls .toggle-play.play:hover {
+  transform: scale(1.1);
+}
+.audio-player .controls .toggle-play.pause {
+  height: 15px;
+  width: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.audio-player .controls .toggle-play.pause:before {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background: white;
+  content: "";
+  height: 15px;
+  width: 3px;
+}
+.audio-player .controls .toggle-play.pause:after {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  background: white;
+  content: "";
+  height: 15px;
+  width: 3px;
+}
+.audio-player .controls .toggle-play.pause:hover {
+  transform: scale(1.1);
+}
+
+.audio-player .controls .time {
+  display: flex;
+}
+.audio-player .controls .time > * {
+  padding: 2px;
+}
+
+.audio-player .controls .volume-container {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.audio-player .controls .volume-container .volume-button {
+  height: 26px;
+  display: flex;
+  align-items: center;
+}
+.audio-player .controls .volume-container .volume-button .volume {
+  transform: scale(0.7);
+}
+.audio-player .controls .volume-container .volume-slider {
+  position: absolute;
+  top: 15px;
+  left: -3px;
+  z-index: -1;
+  width: 0;
+  height: 15px;
+  background: white;
+  box-shadow: 0 0 20px #000a;
+  transition: 0.25s;
+}
+.audio-player .controls .volume-container .volume-slider .volume-percentage {
+  background: coral;
+  height: 100%;
+  width: 75%;
+}
+.audio-player .controls .volume-container:hover .volume-slider {
+  left: -123px;
+  width: 120px;
+}
+/*Learn Page*/
+.learn-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap:20px;
+  row-gap: 20px;
+}
+.pdf-learn-object-container{
+  width: 30vw;
+  height: 50vh;
+  position:relative;
+  scroll-behavior: auto;
+}
+iframe.fullScreen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

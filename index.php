@@ -9,12 +9,13 @@
                         </a>
                     </h1>
                 </header>
+                <?php require_once 'pdfcontent.php'; ?> 
+                <!-- <iframe src="/pdfcontent/affection.pdf" width="100%" height="500px"></iframe> -->
             </article>
         </section>
     </div> 
-</div>
-<footer class="footer" role="contentinfo"></footer>
-
+<?php require_once 'comments.php'; ?>
+<?php require_once 'footer.php'; ?>
 </body>
 </html> 
 
