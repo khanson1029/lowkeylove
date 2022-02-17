@@ -3,9 +3,7 @@
             <article id="testimonial-of-the-day">
                 <header>
                     <h2 class="post-title">
-                        <a title="Testimonials">
                             What People are Saying...
-                        </a>
                     </h2>
                 </header>
             </article>

@@ -1,63 +1,124 @@
+
+body{
+  height:100%;
+  background-color: rgba(238, 236, 236, 0.5);
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0;
+  margin-bottom: 0;    
+
+}
+.banner{
+ background-image: linear-gradient(rgba(122, 118, 118, 0.5), rgba(77, 75, 75, 0.5)), url("/images/bannerimage.png");
+ background-size: 100vw;
+
+}
+
+.main-grid-container{
+  display:grid;
+  grid-template-columns: auto;
+  width:100vw;
+}
+
+.nav-container{
+  border:3px solid rgb(70, 68, 68);
+  background-color: #5b5c5e;
+  height: 40px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-items{flex-direction: row;}
+}
+.nav-items{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-items: center;
+  flex-shrink: 1;
+  stroke-width: 6;
+}
+.navbar li{
+  font-family: "Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;;
+  margin-left: auto;
+  margin-right: auto;
+  color: #c9b351;
+  position: inherit;
+}
+
 ul {
-    list-style-type:none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  list-style-type:none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  overflow: hidden;
 
-  }
-    
-  li a, .dropbtn {
-    display: block;
-    flex-direction: column;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+}
   
-  
-  li.dropdown {
-    display:block;
-  }
-  
-  div a, .drop1{
-    width: 100%;
-    position: left;
-  }
-  
-  div a, .drop2{
-    position: left;
-    width: 10%;
-  }
+li a{
+  display: block;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-  .dropdown-content {
-    display:none;
-    position:absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 2;
-  }
-  
- 
-  .dropdown-content a:hover {background-color: #f1f1f1;}
-  
-  .dropdown:hover .dropdown-content {
-    display:contents;
-    width: auto;
-  }
+.dropdown-content {
 
-  .dropdown-content > .drop1{
-    display:block;
-  }
+  list-style-type: none;
+  display: none;
+  position:absolute;
+  color:#5b5c5e;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: auto;
+  margin-right: auto;
 
-  .dropdown-content > .drop2{
-    display: block;
-  }
+}
+
+
+.dropdown-content a:hover {
+  background-color: #5b5c5e;
+}
+
+a:hover.dropdown-content{
+  background-color: #5b5c5e;
+}
+
+.dropdown:hover .dropdown-content {
+  color: #5b5c5e;
+  display: contents;
+  width: 100%;
+}
 
 a{
-    text-decoration: none;
-    color:#5b5c5e;
+  text-decoration: none;
+  color:#5b5c5e;
+}
+a:hover{
+  opacity: 0.4;
+}
+
+h1{
+  text-decoration: none;
+  color:#5b5c5e;
+}
+
+h2{
+  text-decoration: none;
+  color:#5b5c5e;
+}
+
+h3{
+  text-decoration: none;
+  color:#5b5c5e;
+}
+
+h4 {
+  text-decoration: underline;
+  color:#5b5c5e;
 }
 
 @font-face {
@@ -65,52 +126,6 @@ a{
     src: url('/images/LEMONMILK-Light.otf');
 }
 
-body{
-    height:100%;
-    background-color: rgba(238, 236, 236, 0.5);
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0;
-    margin-bottom: 0;    
-
-  }
-.banner{
-   background-image: linear-gradient(rgba(122, 118, 118, 0.5), rgba(77, 75, 75, 0.5)), url("/images/bannerimage.png");
-   background-size: 100vw;
-
-}
-
-.main-grid-container{
-    display:grid;
-    grid-template-columns: auto;
-    width:100vw;
-}
-
-.nav-container{
-    border:3px solid rgb(70, 68, 68);
-    background-color: #5b5c5e;
-    height: 40px;
-    position: relative;
-}
-
-@media only screen and (min-width: 768px) {
-    .nav-items{flex-direction: row;}
-}
-.nav-items{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-shrink: 1;
-    stroke-width: 6;
-}
-.navbar li{
-    font-family: "Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;;
-    flex:1;
-    flex-wrap: wrap;
-    align-items: center;
-    color: #c9b351;
-    position: inherit;
-}
 
 
 
@@ -128,6 +143,26 @@ body{
   justify-content: center;
   white-space: nowrap;
   font-size: 60px;
+}
+
+#Login1{
+  font-family: "Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 30px;
+}
+
+#Login2{
+  font-family: "Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 25px;
+}
+
+.signup{
+  text-decoration: underline;
 }
 
 #logo-main {
@@ -392,4 +427,92 @@ iframe.fullScreen {
   position: absolute;
   top: 0;
   left: 0;
+}
+/*Login css*/
+
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: flex;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Set a style for all buttons */
+.submit-button {
+  display: flex;
+  color: white;
+  padding: 14px 20px;
+  border:#797979;
+  cursor: pointer;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.4;
+}
+
+
+/*My Account*/
+.pie-text-div{
+  font-family: "Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.pie-text-div > h2{
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.piechart {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right:8%;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-image: conic-gradient(
+      #c9b351 70deg, 
+      #dacb87 0 235deg, 
+      #ac9635 0);
+}
+
+.piechart2 {
+  margin-top: 40px;
+  margin-left: 8%;
+  margin-right: auto;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+      #c9b351 70deg, 
+      #dacb87 0 235deg, 
+      #ac9635 0);
+}
+
+.pie{
+  display:flex;
+  justify-content: center;
+}
+
+.horizontal-rule-div{
+  display:flex;
+  width: 100%;
+  height: 5px;
+  background-color: #5b5c5e;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }

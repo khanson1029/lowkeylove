@@ -4,9 +4,7 @@
             <article id="post-of-the-day">
                 <header>
                     <h1 class="post-title">
-                        <a title="Song of the Day">
                             Current Songs
-                        </a>
                     </h1>
                 </header>
             </article>

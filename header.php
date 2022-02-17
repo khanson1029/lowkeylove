@@ -20,18 +20,17 @@
     <div class="nav-container">
         <nav class="navbar" role="navigation">
             <ul class="nav-items">
-                <li><a href="index.php", class="navitem1">HOME</a></li>                
-                <li><a href="listen.php", class="navitem2">LISTEN</a></li>
-                <li><a href="learn.php", class="navitem3">LEARN</a></li>
                 <ul class="dropdown">
                     <li><a href="javascript:void(0)" class="dropbtn">
                         <i class="far fa-user"></i>
                     </a></li>
                     <ul class="dropdown-content"> 
                         <li><a href="login.php", class="drop1">Login</a></li>
-                        <li><a href="getinvolved.php", class="drop2">Get Involved</a></li>
                     </ul> 
-                </ul>
+                </ul>         
+                <li><a href="listen.php", class="navitem2">LISTEN</a></li>
+                <li><a href="learn.php", class="navitem3">LEARN</a></li>
+                <li><a href="index.php", class="navitem1">HOME</a></li>  
                 
             </ul>
         </nav>

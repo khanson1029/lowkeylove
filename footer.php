@@ -15,8 +15,8 @@
                 <li><a href="https://livvyland.com/feed/" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
             </ul>
             <div class="footer-copyright">
-        © 2022 LowKeyLove. All Rights Reserved.
-    </div>
+                © 2022 LowKeyLove. All Rights Reserved.
+            </div>
         </div>
     </div>
     </div>
