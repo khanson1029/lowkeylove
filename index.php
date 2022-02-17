@@ -4,9 +4,7 @@
             <article id="post-of-the-day">
                 <header>
                     <h1 class="post-title">
-                        <a href="learn.html" title="Song of the Day">
-                            Song of the Day
-                        </a>
+                            Song of the Day                    
                     </h1>
                 </header>
                 <?php require_once 'pdfcontent.php'; ?> 
