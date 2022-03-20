@@ -1,15 +1,15 @@
-<?php 
-    require_once 'header.php'; 
+<?php
 
-    session_start();
-    $signupInfo = array();
-    if(isset($_SESSION['signup'])){
-      $signupInfo = $_SESSION['signup'];
-      unset($_SESSION['signup']);
-    }
-  
-    require_once "Dao.php";
-    $dao = new Dao();
+session_start();
+
+  if (isset($_SESSION["access_granted"]) && $_SESSION["access_granted"]) {
+    header("Location:granted.php");
+  }
+
+  $email = "";
+  if (isset($_SESSION["email_preset"])) {
+    $email = $_SESSION["email_preset"];
+  }
 ?>
 <div class="highlight-posts">
     <section role="main">
