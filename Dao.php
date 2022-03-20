@@ -1,12 +1,16 @@
 <?php
+require_once "User.php";
 // Dao.php
-// class for saving and getting comments from MySQL
 class Dao {
+  
+  private $host = "us-cdbr-east-05.cleardb.net";
+  private $db = "heroku_5df2d48f062ccf3";
+  private $user = "ba9d8d486aa03b";
+  private $pass = "0acb9171";
 
-  private $host = "localhost";
-  private $db = "ckenning";
-  private $user = "ckenning";
-  private $pass = "password";
+  //setup User objects
+  private $userFile = "users.txt";
+
 
   public function getConnection () {
     return
@@ -14,20 +18,115 @@ class Dao {
           $this->pass);
   }
 
-  public function saveComment ($comment) {
+
+  public function newUser($name, $email, $username, $password){
     $conn = $this->getConnection();
-    $saveQuery =
-        "INSERT INTO comment
-        (comment)
-        VALUES
-        (:comment)";
-    $q = $conn->prepare($saveQuery);
-    $q->bindParam(":comment", $comment);
+
+    $newUserQuery = 
+        "INSERT INTO users
+         (actualname, username, pass, email)
+         VALUES
+         (:actualname, :username, :pass, :email)";
+
+    $q = $conn->prepare($newUserQuery);
+    $q->bindParam(":actualname", $name);
+    $q->bindParam(":username", $username);
+    $q->bindParam(":pass", $password);
+    $q->bindParam(":email", $email);
     $q->execute();
+
   }
 
-  public function getComments () {
+  public function newPDF($location, $songName, $author, $description, $date){
     $conn = $this->getConnection();
-    return $conn->query("SELECT * FROM comment");
+    
+    $newPDfQuery = 
+        "INSERT INTO pdfs
+         (pdf_location, song_name, song_author, pdf_description, date_added)
+         VALUES
+         (:pdf_location, :song_name, :song_author, :pdf_description, :date_added)";
+
+    $q = $conn->prepare($newPDfQuery);
+    $q->bindParam(":pdf_location", $location);
+    $q->bindParam(":song_name", $songName);
+    $q->bindParam(":song_author", $author);
+    $q->bindParam(":description", $description);
+    $q->bindParam(":date_added", $date);
+    $q->execute();
+
   }
-} // end Dao 
+
+ 
+  public function newMP3($location, $songName, $author, $description, $date){
+    $conn = $this->getConnection();
+    
+    $newMP3Query = 
+        "INSERT INTO mp3s
+         (mp3_location, song_name, song_author, mp3_description, date_added)
+         VALUES
+         (:mp3_location, :song_name, :song_author, :mp3_description, :date_added)";
+
+    $q = $conn->prepare($newMP3Query);
+    $q->bindParam(":mp3_location", $location);
+    $q->bindParam(":song_name", $songName);
+    $q->bindParam(":song_author", $author);
+    $q->bindParam(":mp3_description", $description);
+    $q->bindParam(":date_added", $date);
+    $q->execute();
+
+  }
+
+
+  public function newSong($name, $author, $genre, $description){
+    $conn = $this->getConnection();
+    
+    $newSongQuery = 
+        "INSERT INTO songs
+         (song_name, song_author, song_genre, song_description)
+         VALUES
+         (:song_name, :song_author, :song_genre, :song_description)";
+
+    $q = $conn->prepare($newSongQuery);
+    $q->bindParam(":song_name", $name);
+    $q->bindParam(":song_author", $author);
+    $q->bindParam(":song_genre", $genre);
+    $q->bindParam(":song_description", $description);
+    $q->execute();
+
+  }
+
+  public function newStat($username, $hours, $learned, $uploads, $likes){
+    $conn = $this->getConnection();
+    
+    $newStatQuery = 
+        "INSERT INTO stats
+         (username, hours_played, songs_learned, songs_uploaded, liked_songs)
+         VALUES
+         (:username, :hours_played, :songs_learned, :songs_uploaded, :liked_songs)";
+
+    $q = $conn->prepare($newStatQuery);
+    $q->bindParam(":username", $username);
+    $q->bindParam(":hours_played", $hours);
+    $q->bindParam(":songs_learned", $learned);
+    $q->bindParam(":songs_uploaded", $uploads);
+    $q->bindParam(":liked_songs", $likes);
+    $q->execute();
+
+  }
+  // public function saveComment ($comment) {
+  //   $conn = $this->getConnection();
+  //   $saveQuery =
+  //       "INSERT INTO comment
+  //       (comment)
+  //       VALUES
+  //       (:comment)";
+  //   $q = $conn->prepare($saveQuery);
+  //   $q->bindParam(":comment", $comment);
+  //   $q->execute();
+  // }
+
+  // public function getComments () {
+  //   $conn = $this->getConnection();
+  //   return $conn->query("SELECT * FROM comment");
+  // }
+}

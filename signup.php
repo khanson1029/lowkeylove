@@ -1,4 +1,5 @@
-<?php require_once 'header.php'; ?>
+<?php require_once 'header.php';?>
+
     <div class="highlight-posts">
         <section role="main">
             <article id="post-of-the-day">
@@ -11,9 +12,9 @@
             </article>
         </section>
     </div>
-    <form name="signUpForm" action="signuphandler.php" method="POST">
+    <form name="signUpForm" action="signup_handler.php" method="POST">
       <div id="name-container">
-        <input type="text" name="username", placeholder="Full Name">
+        <input type="text" name="fullname", placeholder="Full Name">
       </div>
       <div id="email-container">
         <input type="text" name="email", placeholder="Email">

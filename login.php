@@ -1,4 +1,16 @@
-<?php require_once 'header.php'; ?>
+<?php 
+    require_once 'header.php'; 
+
+    session_start();
+    $signupInfo = array();
+    if(isset($_SESSION['signup'])){
+      $signupInfo = $_SESSION['signup'];
+      unset($_SESSION['signup']);
+    }
+  
+    require_once "Dao.php";
+    $dao = new Dao();
+?>
 <div class="highlight-posts">
     <section role="main">
         <article id="post-of-the-day">

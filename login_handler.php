@@ -8,7 +8,7 @@ require_once "Dao.php";
 
     try {
       $dao = new Dao();
-      $dao->saveComment($comment);
+    //  $dao->saveComment($comment);
     } catch (Exception $e) {
       var_dump($e);
       die;
