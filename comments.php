@@ -1,9 +1,3 @@
-<?php
-    session_start();
-    if(!isset($_SESSION['authenticated']) || !$_SESSION['authenticated']){
-            header("Location:login.php");
-    }
-?>
 <div class="testimonials">
         <section role="main">
             <article id="testimonial-of-the-day">
