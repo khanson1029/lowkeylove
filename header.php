@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
@@ -31,6 +30,8 @@
                 <li><a href="listen.php", class="navitem2">LISTEN</a></li>
                 <li><a href="learn.php", class="navitem3">LEARN</a></li>
                 <li><a href="index.php", class="navitem1">HOME</a></li>  
+                <li><a href="logout.php", class="navitem4">LOGOUT</a></li>  
+
                 
             </ul>
         </nav>

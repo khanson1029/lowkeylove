@@ -3,12 +3,12 @@
 session_start();
 require_once("header.php");
   if (isset($_SESSION["access_granted"]) && $_SESSION["access_granted"]) {
-    header("Location:granted.php");
+    header("Location:welcome.php");
   }
 
-  $email = "";
-  if (isset($_SESSION["email_preset"])) {
-    $email = $_SESSION["email_preset"];
+  $username = "";
+  if (isset($_SESSION["username"])) {
+    $username = $_SESSION["username"];
   }
 ?>
 <div class="highlight-posts">
@@ -25,7 +25,7 @@ require_once("header.php");
         </article>
     </section>
 </div>
-<form name="loginForm" action="loginhandler.php" method="POST">
+<form name="loginForm" action="login_handler.php" method="POST">
     <div id="user-container">
         <input type="text" name="username" , placeholder="Username">
     </div>

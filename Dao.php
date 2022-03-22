@@ -113,6 +113,16 @@ class Dao {
     $q->execute();
 
   }
+
+  public function getUsernames() {
+    $conn = $this->getConnection();
+    return $conn->query("SELECT username FROM users");
+  }
+
+  public function getPasswords() {
+    $conn = $this->getConnection();
+    return $conn->query("SELECT pass FROM users");
+  }
   // public function saveComment ($comment) {
   //   $conn = $this->getConnection();
   //   $saveQuery =
