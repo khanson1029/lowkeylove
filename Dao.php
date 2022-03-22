@@ -114,15 +114,27 @@ class Dao {
 
   }
 
-  public function getUsernames() {
+  public function userExists($username, $password) {
     $conn = $this->getConnection();
-    return $conn->query("SELECT username FROM users");
+    try{
+      $q = $conn->prepare("select count(*) as total from users where username = :username and pass = :password");
+      $q->bindParam(":username", $username);
+      $q->bindParam(":password", $password);
+      $q->execute();
+      $row = $q->fetch();
+      if($row['total'] == 1){
+        return true;
+      }else{
+        return false;
+      }
+    } catch(Exception $e){
+      echo print_r($e, 1);
+      exit;
+    }
   }
+  
 
-  public function getPasswords() {
-    $conn = $this->getConnection();
-    return $conn->query("SELECT pass FROM users");
-  }
+
   // public function saveComment ($comment) {
   //   $conn = $this->getConnection();
   //   $saveQuery =
