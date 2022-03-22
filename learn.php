@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $_SESSION['authenticated'] = false;
     if(!isset($_SESSION['authenticated']) || !$_SESSION['authenticated']){
             header("Location:login.php");
     }

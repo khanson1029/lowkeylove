@@ -6,7 +6,7 @@
       $username = $_POST["username"];
       $password = hash("sha256", $_POST['password'] . "fKd93Vmz!k*dAv5029Vkf9$3Aa");
     }
-    header("Location:login.php");
+
     $dao = new Dao();
     $_SESSION['authenticated'] = $dao->userExists($username, $password);
 
