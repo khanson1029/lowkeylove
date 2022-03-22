@@ -1,4 +1,3 @@
-
 <?php
 // login_handler.php
 session_start();
@@ -8,7 +7,7 @@ $password = hash("sha256", $_POST['password'], "fKd93Vmz!k*dAv5029Vkf9$3Aa");
 
 $dao = new Dao();
 $_SESSION['authenticated'] = $dao->userExists($username, $password);
-echo ($password);
+
 if ($_SESSION['authenticated']){
   header('Location:welcome.php');
 }else{
