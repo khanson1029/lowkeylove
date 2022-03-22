@@ -1,15 +1,8 @@
 <?php
-
-session_start();
-require_once("header.php");
-  if (isset($_SESSION["authenticated"]) && $_SESSION["authenticated"]) {
-    header("Location:welcome.php");
-  }
-
-  $username = "";
-  if (isset($_SESSION["username"])) {
-    $username = $_SESSION["username"];
-  }
+    session_start();
+    if(!isset($_SESSION['authenticated']) || !$_SESSION['authenticated']){
+            header("Location:login.php");
+    }
 ?>
 <div class="highlight-posts">
     <section role="main">
