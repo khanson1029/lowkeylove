@@ -119,7 +119,7 @@ class Dao {
     try{
       $q = $conn->prepare("select count(*) as total from users where username = :username and pass = :pass");
       $q->bindParam(":username", $username);
-      $q->bindParam(":pass", $password);
+      $q->bindParam(":pass", $pass);
       $q->execute();
       $row = $q->fetch();
       if($row['total'] == 1){
