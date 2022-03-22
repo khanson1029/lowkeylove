@@ -24,7 +24,7 @@
 session_start();
 
 // For simplification Lets pretend I got these login credentials from an SQL table.
-if ("ckennington@gmail.com" == $_POST["email"] &&
+if ("ckennington@gmail.com" == $_POST["username"] &&
     "lollipop" == $_POST["password"]) {
   $_SESSION["access_granted"] = true;
   header("Location:granted.php");
