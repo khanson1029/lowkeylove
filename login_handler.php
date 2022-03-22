@@ -22,17 +22,13 @@
 <?php
 // login_handler.php
 session_start();
-
+$dao = new Dao();
 // For simplification Lets pretend I got these login credentials from an SQL table.
-if ("ckennington@gmail.com" == $_POST["username"] &&
-    "lollipop" == $_POST["password"]) {
+if ($dao->userExists($_POST["username"], $_POST["password"])) {
   $_SESSION["authenticated"] = true;
   header("Location:welcome.php");
 
 } else {
-  $status = "Invalid username or password";
-  $_SESSION["status"] = $status;
-  $_SESSION["email_preset"] = $_POST["email"];
   $_SESSION["authenticated"] = false;
 
   header("Location:login.php");
