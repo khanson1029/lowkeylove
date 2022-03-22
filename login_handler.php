@@ -10,10 +10,10 @@
     $dao = new Dao();
     $_SESSION['authenticated'] = $dao->userExists($username, $password);
 
-    if ($_SESSION['authenticated']){
-      header('Location:welcome.php');
+    if($_SESSION['authenticated']){
+      header("Location:welcome.php");
     }else{
-      $_SESSION["authenticated"] = false;
+      $_SESSION['authenticated'] = false;
       header("Location:login.php");
     }
 ?> 
