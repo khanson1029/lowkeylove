@@ -117,7 +117,7 @@ class Dao {
   public function userExists($username, $password) {
     $conn = $this->getConnection();
     try{
-      $q = $conn->prepare("select count(*) as total from users where username = :username and pass = :password");
+      $q = $conn->prepare("select count(*) as total from users where username = ':username' and pass = ':password'");
       $q->bindParam(":username", $username);
       $q->bindParam(":password", $password);
       $q->execute();
