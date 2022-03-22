@@ -1,9 +1,9 @@
 <?php
     session_start();
     require_once("header.php");
-    if(!isset($_SESSION['authenticated']) || !$_SESSION['authenticated']){
-            header("Location:login.php");
-    }
+    // if(!isset($_SESSION['authenticated']) || !$_SESSION['authenticated']){
+    //         header("Location:login.php");
+    // }
 ?>
 
 <div class="highlight-posts">
