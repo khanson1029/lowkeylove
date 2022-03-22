@@ -20,7 +20,7 @@
       exit;
     }
 ?> 
-<?php
+<!-- <?php
 // login_handler.php
 // session_start();
 // $dao = new Dao();
@@ -34,4 +34,4 @@
 
 //   header("Location:login.php");
 // }
-?> 
+?>  -->
