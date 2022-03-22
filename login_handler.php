@@ -11,10 +11,8 @@ $_SESSION['authenticated'] = $dao->userExists($username, $password);
 echo ($password);
 if ($_SESSION['authenticated']){
   header('Location:welcome.php');
-  exit;
 }else{
   $_SESSION["authenticated"] = false;
   header("Location:login.php");
-  exit;
 }
 ?> 
