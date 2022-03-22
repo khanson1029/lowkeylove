@@ -1,16 +1,14 @@
 <?php
-// granted.php
-require_once("header.php");
 session_start();
-
-if (isset($_SESSION["access_granted"]) && !$_SESSION["access_granted"] ||
-   !isset($_SESSION["access_granted"])) {
-  $_SESSION["status"] = "You need to log in first";
-  header("Location:login.php");
-}
-
-echo "ACCESS GRANTED";
-require_once("footer.php");
+require_once("header.php");
 ?>
-  
-
+  <div class="highlight-posts">
+    <section role="main">
+            <header>
+                <h1 class="post-title-login" id="Login1">
+                    WELCOME!
+                </h1>
+            </header>
+    </section>
+</div>
+<?php require_once 'footer.php'; ?>
