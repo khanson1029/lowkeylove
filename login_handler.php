@@ -2,8 +2,10 @@
 // login_handler.php
 session_start();
 require_once("Dao.php");
-$username = $_POST["username"];
-$password = hash("sha256", $_POST['password'], "fKd93Vmz!k*dAv5029Vkf9$3Aa");
+if(isset($_POST["userSubmitButton"])){
+  $username = $_POST["username"];
+  $password = hash("sha256", $_POST['password'] . "fKd93Vmz!k*dAv5029Vkf9$3Aa");
+}
 
 $dao = new Dao();
 $_SESSION['authenticated'] = $dao->userExists($username, $password);

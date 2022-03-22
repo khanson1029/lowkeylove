@@ -10,7 +10,7 @@ require_once "Dao.php";
       $uname = $_POST['username'];
       $realName = $_POST['fullname'];
       $email = $_POST['email'];
-      $pass = hash("sha256", $_POST['password'], "fKd93Vmz!k*dAv5029Vkf9$3Aa");
+      $pass = hash("sha256", $_POST['password'] . "fKd93Vmz!k*dAv5029Vkf9$3Aa");
       $dao = new Dao();
       $dao->newUser($realName, $email, $uname, $pass);
     } catch (Exception $e) {
