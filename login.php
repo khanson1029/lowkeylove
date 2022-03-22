@@ -2,7 +2,7 @@
 
 session_start();
 require_once("header.php");
-  if (isset($_SESSION["access_granted"]) && $_SESSION["access_granted"]) {
+  if (isset($_SESSION["authenticated"]) && $_SESSION["authenticated"]) {
     header("Location:welcome.php");
   }
 
