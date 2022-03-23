@@ -133,22 +133,21 @@ class Dao {
     }
   }
   
+  public function saveComment ($comment) {
+    $conn = $this->getConnection();
+    $saveQuery =
+        "INSERT INTO comment
+        (comment)
+        VALUES
+        (:comment)";
+    $q = $conn->prepare($saveQuery);
+    $q->bindParam(":comment", $comment);
+    $q->execute();
+  }
 
+  public function getComments () {
+    $conn = $this->getConnection();
+    return $conn->query("SELECT * FROM comment");
+  }
 
-  // public function saveComment ($comment) {
-  //   $conn = $this->getConnection();
-  //   $saveQuery =
-  //       "INSERT INTO comment
-  //       (comment)
-  //       VALUES
-  //       (:comment)";
-  //   $q = $conn->prepare($saveQuery);
-  //   $q->bindParam(":comment", $comment);
-  //   $q->execute();
-  // }
-
-  // public function getComments () {
-  //   $conn = $this->getConnection();
-  //   return $conn->query("SELECT * FROM comment");
-  // }
 }

@@ -9,7 +9,7 @@
         <article id="post-of-the-day">
             <header>
                 <h1 class="post-title-login" id="Login1">
-                    MY ACCOUNT
+                    PLEASE SIGN IN TO YOUR ACCOUNT
                 </h1>
                 <h2 class="post-title-login" id="Login2">
                     Login:

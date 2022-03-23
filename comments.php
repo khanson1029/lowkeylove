@@ -15,7 +15,24 @@
             <div class="body">
                 <span class="tip tip-up"></span>
                 <div class="message">
-                    <span>This is where testimonials will go.</span>
+                    <form name="commentForm" action="comment_handler.php" method="POST">
+                        <span>Leave a comment: <input type="text" name="comment"></span>
+                        <div>
+                            <input type="submit" name="commentButton" value="Submit">
+                        </div>
+                        <input type="hidden" name="form" value="comment">
+                    </form>
+                    <?php
+                    $comments = $dao->getComments();
+                    echo "<table>";
+                    foreach ($comments as $comment) {
+                    echo "<tr>";
+                    echo "<td>" . $comment["comment"] . "</td>";
+                    echo "<td>" . $comment["created"] . "</td>";
+                    echo "</tr>";
+                    }
+                    echo "</table>";
+                    ?>
                 </div>
             </div>
         </div>
