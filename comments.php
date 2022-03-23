@@ -23,6 +23,7 @@
                         <input type="hidden" name="form" value="comment">
                     </form>
                     <?php
+                    $dao = new Dao();
                     $comments = $dao->getComments();
                     echo "<table>";
                     foreach ($comments as $comment) {
