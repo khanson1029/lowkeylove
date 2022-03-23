@@ -8,33 +8,30 @@
                 </header>
             </article>
         </section>
-    </div> 
+</div> 
+<div class="comment-form", id="Login2">     
+        <form name="commentForm" action="comment_handler.php" method="POST">
+                            <div>Leave a comment: <input type="text" name="comment"></div>
+                            <div>
+                                <input type="submit" name="commentButton" value="Submit">
+                            </div>
+                            <input type="hidden" name="form" value="comment">
+        </form>
+</div>
 
-    <div class="comment-box">
-        <div class="dialogbox">
-            <div class="body">
-                <span class="tip tip-up"></span>
-                <div class="message">
-                    <form name="commentForm" action="comment_handler.php" method="POST">
-                        <span>Leave a comment: <input type="text" name="comment"></span>
-                        <div>
-                            <input type="submit" name="commentButton" value="Submit">
-                        </div>
-                        <input type="hidden" name="form" value="comment">
-                    </form>
+<div class="comment-box">
+    <div class="dialogbox">
+        <div class="body">
+            <span class="tip tip-up"></span>
+            <div class="message">
                     <?php
-                    $dao = new Dao();
-                    $comments = $dao->getComments();
-                    echo "<table>";
-                    foreach ($comments as $comment) {
-                    echo "<tr>";
-                    echo "<td>" . $comment["comment"] . "</td>";
-                    echo "<td>" . $comment["created"] . "</td>";
-                    echo "</tr>";
-                    }
-                    echo "</table>";
+                        $dao = new Dao();
+                        $comments = $dao->getComments();
+                        foreach ($comments as $comment) {
+                            echo "<span>" . $comment["comment"] . - $comment["username"] . "</span>";
+                        }
                     ?>
-                </div>
             </div>
         </div>
     </div>
+</div>
