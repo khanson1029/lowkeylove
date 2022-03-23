@@ -136,7 +136,7 @@ class Dao {
   public function saveComment ($comment) {
     $conn = $this->getConnection();
     $saveQuery =
-        "INSERT INTO comment
+        "INSERT INTO comments
         (comment)
         VALUES
         (:comment)";
@@ -147,7 +147,7 @@ class Dao {
 
   public function getComments () {
     $conn = $this->getConnection();
-    return $conn->query("SELECT * FROM comment");
+    return $conn->query("SELECT * FROM comments");
   }
 
 }
