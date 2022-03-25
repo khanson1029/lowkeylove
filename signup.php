@@ -12,7 +12,7 @@
             </article>
         </section>
     </div>
-    <form name="signUpForm" action="/handlers/signup_handler.php" method="POST">
+    <form name="signUpForm" action="signup_handler.php" method="POST">
       <div id="name-container">
         <input type="text" name="fullname", placeholder="Full Name">
       </div>
