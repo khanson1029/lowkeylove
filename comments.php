@@ -23,26 +23,17 @@
 <div class="comment-box">
     <div class="dialogbox">
         <div class="body">
-            <!-- <span class="tip tip-up"></span>
-                <div class="message">LEAVE NOW!
-                </div>
-            </span>
             <span class="tip tip-up"></span>
-                <div class="message">LEAVE NOW!
-                </div>
-            </span> -->
-            <!-- <?php
-                $dao = new Dao();
-                $comments = $dao->getComments();
-                foreach ($comments as $comment) {
-                    echo "<span class='tip tip-up'>";
-                    echo        "<div class = 'message'>";
-                    echo             $comment["comment"];
-                    echo        "</div>";
-                    echo "</span>";
-                    // . - $comment["username"] . "</span>";
-               }
-            ?> -->
+            <div class="message">
+                    <?php
+                        $dao = new Dao();
+                        $comments = $dao->getComments();
+                        foreach ($comments as $comment) {
+                            echo "<span>" . $comment["comment"] . "</span>";
+                            // . - $comment["username"] . "</span>";
+                        }
+                    ?>
+            </div>
         </div>
     </div>
 </div>
