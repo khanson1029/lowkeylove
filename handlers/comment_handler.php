@@ -4,9 +4,8 @@
 session_start();
 require_once "Dao.php";
 
-  if (isset($_POST["commentButton"])) {
+  if (isset($_POST["commentButton"])){
     $comment = $_POST["comment"];
-
     try {
       $dao = new Dao();
       $dao->saveComment($comment);
@@ -15,4 +14,4 @@ require_once "Dao.php";
       die;
     }
    }
-  header("Location:index.php");
+  header("Location:/../index.php");

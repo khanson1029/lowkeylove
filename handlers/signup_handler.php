@@ -18,5 +18,5 @@ require_once "Dao.php";
       die;
     }
    }
-  header("Location:login.php");
+  header("Location:/../login.php");
   ?>

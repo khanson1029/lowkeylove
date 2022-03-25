@@ -18,7 +18,7 @@
         </article>
     </section>
 </div>
-<form name="loginForm" action="login_handler.php" method="POST">
+<form name="loginForm" action="/handlers/login_handler.php" method="POST">
     <div id="user-container">
         <input type="text" name="username" , placeholder="Username">
     </div>
