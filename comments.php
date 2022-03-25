@@ -30,7 +30,7 @@
                         foreach ($comment as $comments) {
                             echo "<span>" . $comment["comment"] . - $comment["username"] . "</span>";
                         }
-                    ?>
+                    ?>yo
             </div>
         </div>
     </div>
