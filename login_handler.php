@@ -5,6 +5,7 @@
     if(isset($_POST["userSubmitButton"])){
       $username = $_POST["username"];
       $password = hash("sha256", $_POST['password'] . "fKd93Vmz!k*dAv5029Vkf9$3Aa");
+      $_SESSION['username'] = $username;
     }
 
     $dao = new Dao();
