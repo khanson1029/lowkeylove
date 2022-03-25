@@ -14,4 +14,4 @@ require_once "Dao.php";
       die;
     }
    }
-  header("Location:/../index.php");
+  header("Location:../index.php");
