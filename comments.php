@@ -29,7 +29,7 @@
                         $dao = new Dao();
                         $comments = $dao->getComments();
                         foreach ($comments as $comment) {
-                            echo $comment["comment"];
+                            echo "<span>" . $comment["comment"] . "</span>";
                             // . - $comment["username"] . "</span>";
                         }
                     ?>
