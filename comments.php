@@ -23,14 +23,14 @@
     <div class="dialogbox">
         <div class="body">
             <span class="tip tip-up"></span>
-            <div class="message">
+            <div class="message">LEAVE NOW!
                     <?php
                         $dao = new Dao();
                         $comments = $dao->getComments();
                         foreach ($comment as $comments) {
                             echo "<span>" . $comment["comment"] . - $comment["username"] . "</span>";
                         }
-                    ?>yo
+                    ?>
             </div>
         </div>
     </div>
