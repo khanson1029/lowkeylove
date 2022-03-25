@@ -1,3 +1,4 @@
+<?php require_once "Dao.php"?>
 <div class="testimonials">
         <section role="main">
             <article id="testimonial-of-the-day">
