@@ -142,7 +142,7 @@ class Dao {
         (:comment, :actualname)";
     $q = $conn->prepare($saveQuery);
     $q->bindParam(":comment", $comment);
-    $q->bindParam(":actualname", $_SESSION['actualname']);
+    $q->bindParam(":username", $_SESSION['username']);
     $q->execute();
   }
 
@@ -151,8 +151,8 @@ class Dao {
     return $conn->query("SELECT * FROM comments");
   }
 
-  // public function getActualName($username) {
-  //   $conn = $this->getConnection();
-  //   return $conn->query("SELECT actualname FROM users WHERE username LIKE '$username'");
-  // }
+  public function getActualName($username) {
+    $conn = $this->getConnection();
+    return $conn->query("SELECT actualname FROM users WHERE username LIKE '$username'");
+  }
 }
