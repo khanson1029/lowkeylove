@@ -137,11 +137,12 @@ class Dao {
     $conn = $this->getConnection();
     $saveQuery =
         "INSERT INTO comments
-        (comment)
+        (comment), (username)
         VALUES
-        (:comment)";
+        (:comment), (:username)";
     $q = $conn->prepare($saveQuery);
     $q->bindParam(":comment", $comment);
+    $q->bindParam(":username", $_SESSION['username']);
     $q->execute();
   }
 
