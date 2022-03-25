@@ -35,7 +35,11 @@
                 $dao = new Dao();
                 $comments = $dao->getComments();
                 foreach ($comments as $comment) {
-                    echo "<span class='tip tip-up'>". "<div class = 'message'>" . $comment["comment"] . "</div>" . "</span>";
+                    echo "<span class='tip tip-up'>";
+                    echo        "<div class = 'message'>";
+                    echo             $comment["comment"];
+                    echo        "</div>";
+                    echo "</span>";
                     // . - $comment["username"] . "</span>";
                }
             ?> -->
