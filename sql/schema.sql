@@ -14,7 +14,6 @@ CREATE TABLE IF NOT EXISTS users(
  username VARCHAR(50) NOT NULL,
  pass VARCHAR(100) NOT NULL,
  email VARCHAR(100) NOT NULL,
-
  PRIMARY KEY(user_id)
 );
 CREATE TABLE IF NOT EXISTS pdfs(
@@ -54,7 +53,6 @@ PRIMARY KEY (stats_id)
 );
 CREATE TABLE IF NOT EXISTS comments(
 comment_id INT AUTO_INCREMENT,
-actualname VARCHAR(80) NOT NULL,
 username VARCHAR(80) NOT NULL,
 comment VARCHAR(250) NOT NULL,
 PRIMARY KEY (comment_id)
