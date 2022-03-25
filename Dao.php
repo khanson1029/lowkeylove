@@ -151,8 +151,8 @@ class Dao {
     return $conn->query("SELECT * FROM comments");
   }
 
-  public function getActualName($username) {
-    $conn = $this->getConnection();
-    return $conn->query("SELECT actualname FROM users WHERE username LIKE '$username'");
-  }
+  // public function getActualName($username) {
+  //   $conn = $this->getConnection();
+  //   return $conn->query("SELECT actualname FROM users WHERE username LIKE '$username'");
+  // }
 }
