@@ -153,6 +153,6 @@ class Dao {
 
   public function getActualName($username) {
     $conn = $this->getConnection();
-    return $conn->query("SELECT actualname FROM users WHERE username LIKE $username");
+    return $conn->query("SELECT actualname FROM users WHERE username LIKE '$username'");
   }
 }
