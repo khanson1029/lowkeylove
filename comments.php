@@ -22,7 +22,7 @@
 
 <div class="comment-box">
     <div class="dialogbox">
-        <!-- <div class="body"> -->
+        <div class="body">
             <!-- <span class="tip tip-up"></span>
                 <div class="message">LEAVE NOW!
                 </div>
@@ -42,6 +42,6 @@
                     // . - $comment["username"] . "</span>";
                }
             ?> -->
-        <!-- </div> -->
+        </div>
     </div>
 </div>
