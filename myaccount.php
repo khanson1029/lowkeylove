@@ -20,7 +20,7 @@
         <h4><a href="pdf.php" , class="pdf-upload">Upload Your Sheet Music</a></h4>
     </div>
     <div class="post-title" id="Login2">
-        <h4><a href="pdf.php" , class="pdf-upload">Upload Your MP3s</a></h4>
+        <h4><a href="mp3.php" , class="pdf-upload">Upload Your MP3s</a></h4>
     </div>
     <div class="pie-text-div">       
         <h2 class="post-title-login" id="pie1"># hours played!</h2>
