@@ -137,9 +137,9 @@ class Dao {
     $conn = $this->getConnection();
     $saveQuery =
         "INSERT INTO comments
-        (comment, actualname)
+        (comment, username)
         VALUES
-        (:comment, :actualname)";
+        (:comment, :username)";
     $q = $conn->prepare($saveQuery);
     $q->bindParam(":comment", $comment);
     $q->bindParam(":username", $_SESSION['username']);
@@ -151,8 +151,4 @@ class Dao {
     return $conn->query("SELECT * FROM comments");
   }
 
-  // public function getActualName($username) {
-  //   $conn = $this->getConnection();
-  //   return $conn->query("SELECT actualname FROM users WHERE username LIKE '$username'");
-  // }
 }
