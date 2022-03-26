@@ -24,7 +24,7 @@
                         <i class="far fa-user"></i>
                     </a></li>
                     <ul class="dropdown-content"> 
-                        <li><a href="login.php", class="drop1">Login</a></li>
+                        <li><a href="myaccount.php", class="drop1">MY ACCOUNT</a></li>
                     </ul> 
                 </ul>         
                 <li><a href="listen.php", class="navitem2">LISTEN</a></li>

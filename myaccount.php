@@ -1,4 +1,10 @@
-<?php require_once 'header.php'; ?>
+<?php 
+    session_start();
+    require_once 'header.php';
+    require_once 'Dao.php';
+    if(!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] === false){
+        header("Location:login.php");
+    } ?>
     <div class="highlight-posts">
         <section role="main">
             <article id="post-of-the-day">

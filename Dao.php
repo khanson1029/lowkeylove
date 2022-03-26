@@ -151,4 +151,11 @@ class Dao {
     return $conn->query("SELECT * FROM comments");
   }
 
+  public function savePdf($pdf){
+    $conn = $this->getConnection();
+  }
+
+  public function getPdfs(){
+
+  }
 }
