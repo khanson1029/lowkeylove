@@ -17,8 +17,16 @@
         </section>
     </div>
     <div class="post-title" id="Login2">
-        <h4><a href="pdf.php" , class="pdf-upload">Upload Your Sheet Music</a></h4>
+        <h4 class="pdf-upload">Upload Your Sheet Music</h4>
     </div>
+    <form name="pdfForm" action="pdf_handler.php" method="POST">
+    <div id = Login2>
+        <input type="file" name="file" , size = "50">
+    </div>
+    <div class="submit-button">
+        <input type="submit" name="userSubmitButton" value="Submit">
+    </div>
+</form>
     <div class="post-title" id="Login2">
         <h4><a href="mp3.php" , class="pdf-upload">Upload Your MP3s</a></h4>
     </div>
