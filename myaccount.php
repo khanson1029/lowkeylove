@@ -26,10 +26,18 @@
     <div class="submit-button">
         <input type="submit" name="userSubmitButton" value="Submit">
     </div>
-</form>
+    </form>
     <div class="post-title" id="Login2">
-        <h4><a href="mp3.php" , class="pdf-upload">Upload Your MP3s</a></h4>
+        <h4 class="mp3-upload">Upload Your MP3s</h4>
     </div>
+    <form name="mp3Form" action="mp3_handler.php" method="POST">
+    <div id = Login2>
+        <input type="file" name="file" , size = "50">
+    </div>
+    <div class="submit-button">
+        <input type="submit" name="userSubmitButton" value="Submit">
+    </div>
+    </form>
     <div class="pie-text-div">       
         <h2 class="post-title-login" id="pie1"># hours played!</h2>
         <h2 class="post-title-login" id="pie2"># songs mastered!</h2>
