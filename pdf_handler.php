@@ -1,42 +1,24 @@
 <?php
-session_start();
-require_once "Dao.php";
+  // product/upload.php
+  require_once "Dao.php";
+  $dao = new Dao();
 
-if($_SESSION['authenticated'] === true){
-    $targetfolder = "pdfcontent/";
+  // save a product, including name, description, and an image path
+  $name = (isset($_POST["pdfname"])) ? $_POST["pdfname"] : "";
+  $description = (isset($_POST["pdfdescription"])) ? $_POST["pdfdescription"] : "";
 
-    $targetfolder = $targetfolder . basename( $_FILES['file']['name']) ;
-    
-    $ok=1;
-    
-    $file_type=$_FILES['file']['type'];
-    
-    if ($file_type=="application/pdf") {
-    
-    if(move_uploaded_file($_FILES['file']['tmp_name'], $targetfolder))
-    
-    {
-    
-    echo "The file ". basename( $_FILES['file']['name']). " is uploaded";
-    
+  $imagePath = "";
+  if (count($_FILES) > 0) {
+    if ($_FILES["pdffile"]["error"] > 0) {
+      throw new Exception("Error: " . $_FILES["pdffile"]["error"]);
+    } else {
+      $basePath = "/var/www/cs401_domain";
+      $imagePath = "/pdfcontent" . $_FILES["pdffile"]["pdfname"];
+      if (!move_uploaded_file($_FILES["pdffile"]["tmp_name"], $basePath . $imagePath)) {
+        throw new Exception("File move failed");
+      }
     }
-    
-    else {
-    
-    echo "Problem uploading file";
-    
-    }
-    
-    }
-    
-    else {
-    
-    echo "You may only upload PDFs.<br>";
-    
-    }
-}else{
-    header("Location:login.php");
-}
-
-
-?>
+  }
+  $dao->savePdf($name, $description, $imagePath);
+  header("Location:myaccount.php");
+  ?>
