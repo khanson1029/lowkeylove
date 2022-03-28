@@ -47,19 +47,20 @@
     <div id = "Login1">
         <form action="pdf_handler.php" method="POST" enctype="multipart/form-data">
         <div id="Login2">
-          <input type="text" name="pdfname", placeholder="Song Name"/>
+            <input type="text" name="pdfname", placeholder="Song Name"/>
         </div>
         <div id="Login2">
-        <input type="text" name="pdfdescription", placeholder="Description"/>
+            <input type="text" name="pdfdescription", placeholder="Description"/>
         </div>
         <div id="Login2">
-          <input type="file" name="pdffile" id="pdffile"><br>
+             <input type="file" name="pdffile" id="pdffile"><br>
+        </div>
+        <div class="submit-button">
+            <input type="submit" name="pdfSubmitButton" value="Submit">
         </div>
      </form>
     </div>
-    <div class="submit-button">
-        <input type="submit" name="pdfSubmitButton" value="Submit">
-    </div>
+
     </form>
     <div class="post-title" id="Login2">
         <h4 class="mp3-upload">My Songs</h4>
@@ -92,19 +93,20 @@
     <div id = "Login1">
         <form action="mp3_handler.php" method="POST" enctype="multipart/form-data">
         <div id="Login2">
-          <input type="text" name="mpegsongname", placeholder="Song Name"/>
+            <input type="text" name="mpegsongname", placeholder="Song Name"/>
         </div>
         <div id="Login2">
-        <input type="text" name="mpegsongdescription", placeholder="Description"/>
+            <input type="text" name="mpegsongdescription", placeholder="Description"/>
         </div>
         <div id="Login2">
-          <input type="file" name="mpegfile" id="mpegfile"><br>
+            <input type="file" name="mpegfile" id="mpegfile"><br>
+        </div>
+        <div class="submit-button">
+            <input type="submit" name="mpegSubmitButton" value="Submit">
         </div>
      </form>
     </div>
-    <div class="submit-button">
-        <input type="submit" name="mpegSubmitButton" value="Submit">
-    </div>
+
 
     <div class="pie-text-div">       
         <h2 class="post-title-login" id="pie1"># hours played!</h2>
