@@ -32,18 +32,17 @@
     </div>
     <div id = "Login1">
         <form action="mp3_handler.php" method="POST" enctype="multipart/form-data">
-        <div>
-          <label for="name">Product Name:</label>
+        <div id="Login2">
+          <label for="name">Song Name:</label>
           <input type="text" name="name"/>
         </div>
-        <div>
-        <label for="name">Product Description:</label>
+        <div id="Login2">
+        <label for="name">Song Description:</label>
         <input type="text" name="description"/>
         </div>
-        <div>
-          <label for="file">Image:</label>
+        <div id="Login2">
+          <label for="file">MP3:</label>
           <input type="file" name="file" id="file"><br>
-          <input type="submit" name="submit" value="Submit">
         </div>
      </form>
     </div>
