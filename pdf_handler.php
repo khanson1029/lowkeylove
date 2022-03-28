@@ -9,8 +9,8 @@
     $description = $_POST['pdfdescription'];
     $author = $_SESSION['username']; 
   }else{
-      echo "Please enter a name and description";
       header("Location:myaccount.php");
+      echo "Please enter a name and description";
   }
 
   $imagePath = "";
