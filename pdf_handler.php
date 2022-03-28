@@ -9,7 +9,7 @@
     $description = $_POST['pdfdescription'];
     $author = $_SESSION['username']; 
   }else{
-      header("Location:myaccount.php");
+      header("Location:myaccount.php");exit;
       echo "Please enter a name and description";
   }
 
@@ -27,4 +27,5 @@
   }
   $dao->savePdf($name, $description, $imagePath, $author);
   header("Location:myaccount.php");
+  exit;
   ?>
