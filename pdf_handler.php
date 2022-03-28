@@ -10,7 +10,6 @@
     $author = $_SESSION['username']; 
   }else{
       header("Location:myaccount.php");exit;
-      echo "Please enter a name and description";
   }
 
   $imagePath = "";
