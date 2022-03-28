@@ -56,7 +56,7 @@
              <input type="file" name="pdffile" id="pdffile"><br>
         </div>
         <div class="submit-button">
-            <input type="submit" name="pdfSubmitButton" value="Submit">
+            <input type="submit" name="pdfSubmitButton" value="pdfSubmitButton">
         </div>
      </form>
     </div>
