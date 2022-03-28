@@ -20,5 +20,5 @@
     }
   }
   $dao->saveMpeg($name, $description, $imagePath);
-  header("location:https://lowkeylove.herokuapp.com/myaccount.php");
+  header("Location:myaccount.php");
   ?>
