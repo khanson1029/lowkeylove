@@ -151,7 +151,7 @@ class Dao {
     return $conn->query("SELECT * FROM comments");
   }
 
-  public function savePdf($name, $description, $pdfPath) {
+  public function savePdf($name, $description, $pdfPath, $author) {
     $conn = $this->getConnection();
     $saveQuery =
         "INSERT INTO pdfs
@@ -161,7 +161,7 @@ class Dao {
     $q = $conn->prepare($saveQuery);
     $q->bindParam(":pdf_location", $pdfPath);
     $q->bindParam(":song_name", $name);
-    $q->bindParam(":song_author", $_SESSION['username']);
+    $q->bindParam(":song_author", $author);
     $q->bindParam(":pdf_description", $description);
     
     $q->execute();

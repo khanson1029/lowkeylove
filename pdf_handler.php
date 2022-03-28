@@ -4,8 +4,14 @@
   $dao = new Dao();
 
   // save a product, including name, description, and an image path
-  $name = (isset($_POST["pdfname"])) ? $_POST["pdfname"] : "";
-  $description = (isset($_POST["pdfdescription"])) ? $_POST["pdfdescription"] : "";
+  if(isset($_POST["pdfSubmitButton"])){
+    $name = $_POST['pdfname'];
+    $description = $_POST['pdfdescription'];
+    $author = $_SESSION['username']; 
+  }else{
+      echo "Please enter a name and description";
+      header("Location:myaccount.php");
+  }
 
   $imagePath = "";
   if (count($_FILES) > 0) {
@@ -19,6 +25,6 @@
       }
     }
   }
-  $dao->savePdf($name, $description, $imagePath);
+  $dao->savePdf($name, $description, $imagePath, $author);
   header("Location:myaccount.php");
   ?>
