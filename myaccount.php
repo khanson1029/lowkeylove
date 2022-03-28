@@ -22,18 +22,18 @@
     <div id = "Login1">
         <form action="pdf_handler.php" method="POST" enctype="multipart/form-data">
         <div id="Login2">
-          <input type="text" name="name", placeholder="Song Name"/>
+          <input type="text" name="pdfname", placeholder="Song Name"/>
         </div>
         <div id="Login2">
-        <input type="text" name="description", placeholder="Description"/>
+        <input type="text" name="pdfdescription", placeholder="Description"/>
         </div>
         <div id="Login2">
-          <input type="file" name="file" id="file"><br>
+          <input type="file" name="pdffile" id="pdffile"><br>
         </div>
      </form>
     </div>
     <div class="submit-button">
-        <input type="submit" name="userSubmitButton" value="Submit">
+        <input type="submit" name="pdfSubmitButton" value="Submit">
     </div>
     </form>
     <div class="post-title" id="Login2">
@@ -42,19 +42,44 @@
     <div id = "Login1">
         <form action="mp3_handler.php" method="POST" enctype="multipart/form-data">
         <div id="Login2">
-          <input type="text" name="name", placeholder="Song Name"/>
+          <input type="text" name="mpegsongname", placeholder="Song Name"/>
         </div>
         <div id="Login2">
-        <input type="text" name="description", placeholder="Description"/>
+        <input type="text" name="mpegsongdescription", placeholder="Description"/>
         </div>
         <div id="Login2">
-          <input type="file" name="file" id="file"><br>
+          <input type="file" name="mpegfile" id="mpegfile"><br>
         </div>
      </form>
     </div>
     <div class="submit-button">
-        <input type="submit" name="userSubmitButton" value="Submit">
+        <input type="submit" name="mpegSubmitButton" value="Submit">
     </div>
+    <div class="post-title" id="Login2">
+        <h4 class="mp3-upload">Your MP3s</h4>
+    </div>
+    <ul id="playlist">
+        <li class="active">
+            <a href="https://www.archive.org/download/bolero_69/Bolero.mp3">
+                    Ravel Bolero
+            </a>
+        </li>
+        <li>
+            <a href="https://www.archive.org/download/MoonlightSonata_755/Beethoven-MoonlightSonata.mp3">
+                    Moonlight Sonata - Beethoven
+            </a>
+        </li>
+        <li>
+            <a href="https://www.archive.org/download/CanonInD_261/CanoninD.mp3">
+                    Canon in D Pachabel
+            </a>
+        </li>
+        <li>
+            <a href="https://www.archive.org/download/PatrikbkarlChamberSymph/PatrikbkarlChamberSymph_vbr_mp3.zip">
+                    patrikbkarl chamber symph
+            </a>
+        </li>
+    </ul>
 
     <div class="pie-text-div">       
         <h2 class="post-title-login" id="pie1"># hours played!</h2>

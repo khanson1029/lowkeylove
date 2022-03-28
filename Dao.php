@@ -151,11 +151,52 @@ class Dao {
     return $conn->query("SELECT * FROM comments");
   }
 
-  public function savePdf($pdf){
+  public function savePdf($name, $description, $pdfPath) {
     $conn = $this->getConnection();
+    $saveQuery =
+        "INSERT INTO pdfs
+        (pdf_location, song_name, song_author, pdf_description)
+        VALUES
+        (:pdf_location, :song_name, :song_author, :pdf_description)";
+    $q = $conn->prepare($saveQuery);
+    $q->bindParam(":pdf_location", $pdfPath);
+    $q->bindParam(":song_name", $name);
+    $q->bindParam(":song_author", $_SESSION['username']);
+    $q->bindParam(":pdf_description", $description);
+    
+    $q->execute();
   }
 
-  public function getPdfs(){
+  public function getPdfs ($user) {
+    $conn = $this->getConnection();
+    $getQuery = "SELECT song_author, song_name, pdf_description, pdf_location FROM pdfs WHERE song_author = :user";
+    $q = $conn->prepare($getQuery);
+    $q->bindParam(":user", $user);
+    $q->execute();
+    return reset($q->fetchAll());
+  }
 
+  public function saveMpeg ($name, $description, $mpegPath) {
+    $conn = $this->getConnection();
+    $saveQuery =
+        "INSERT INTO mp3s
+        (mp3_location, song_name, song_author, mp3_description)
+        VALUES
+        (:mp3_location, :song_name, :song_author, :mp3_description)";
+    $q = $conn->prepare($saveQuery);
+    $q->bindParam(":mp3_location", $mpegPath);
+    $q->bindParam(":song_name", $name);
+    $q->bindParam(":song_author", $_SESSION['username']);
+    $q->bindParam(":mp3_description", $description);
+    $q->execute();
+  }
+
+  public function getMpeg ($user) {
+    $conn = $this->getConnection();
+    $getQuery = "SELECT song_author, song_name, mp3_description, mp3_location FROM mp3s WHERE song_author = :user";
+    $q = $conn->prepare($getQuery);
+    $q->bindParam(":id", $id);
+    $q->execute();
+    return reset($q->fetchAll());
   }
 }
