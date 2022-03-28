@@ -31,9 +31,9 @@
         <h4 class="mp3-upload">Upload Your MP3s</h4>
     </div>
     <form name="mp3Form" action="mp3_handler.php" method="POST">
-    <div id = Login1>
+    <div id = "Login1">
         <form action="upload.php" method="POST" enctype="multipart/form-data">
-        <div>
+        <div id= "Login1">
           <label for="name">Product Name:</label>
           <input type="text" name="name"/>
         </div>
