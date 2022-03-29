@@ -19,7 +19,7 @@
     if ($_FILES["pdffile"]["error"] > 0) {
       throw new Exception("Error: " . $_FILES["pdffile"]["error"]);
     } else {
-      $basePath = realpath("/var/www/cs401_domain"(getcwd()));
+      $basePath = realpath("/var/www/cs401_domain");
     //   echo print_r($_FILES, 1);
     //   exit;
       $imagePath = "/pdfcontent/" . $_FILES["pdffile"]["name"];
