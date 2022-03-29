@@ -18,9 +18,9 @@
       throw new Exception("Error: " . $_FILES["pdffile"]["error"]);
     } else {
       $basePath = "/var/www/cs401_domain";
-      echo print_r($_FILES, 1);
-      exit;
-      $imagePath = "/pdfcontent" . $_FILES["pdffile"]["pdfname"];
+    //   echo print_r($_FILES, 1);
+    //   exit;
+      $imagePath = "/pdfcontent" . $_FILES["pdffile"]["name"];
       if (!move_uploaded_file($_FILES["pdffile"]["tmp_name"], $basePath . $imagePath)) {
         throw new Exception("File move failed");
       }
