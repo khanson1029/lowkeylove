@@ -11,7 +11,7 @@
 //   }else{
 //       header("Location:myaccount.php");exit;
 //   }
-  $name = (isset($_POST["name"])) ? $_POST["name"] : "";
+  $songname = (isset($_POST["name"])) ? $_POST["name"] : "";
   $description = (isset($_POST["description"])) ? $_POST["description"] : "";
   $author = $_SESSION['username'];
   $imagePath = "";
