@@ -1,8 +1,6 @@
 <?php
-  // product/upload.php
   session_start();
-  require_once "Dao.php";
-  $dao = new Dao();
+  require_once("Dao.php");
 
   // save a product, including name, description, and an image path
   if(isset($_POST["pdfSubmitButton"])){
@@ -25,7 +23,13 @@
       }
     }
   }
-  $dao->savePdf($name, $description, $imagePath, $author);
+  try{
+    $dao = new Dao();
+    $dao->savePdf($name, $description, $imagePath, $author);
+  } catch (Exception $e){
+      var_dump($e);
+        die;
+    }
   header("Location:myaccount.php");
   exit;
   ?>
