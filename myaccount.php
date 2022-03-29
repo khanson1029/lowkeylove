@@ -19,28 +19,6 @@
     <div class="post-title" id="Login2">
         <h4 class="mp3-upload">My Sheets</h4>
     </div>
-    <ul id="playlist">
-        <li class="active">
-            <a href="https://www.archive.org/download/bolero_69/Bolero.mp3">
-                    Ravel Bolero
-            </a>
-        </li>
-        <li>
-            <a href="https://www.archive.org/download/MoonlightSonata_755/Beethoven-MoonlightSonata.mp3">
-                    Moonlight Sonata - Beethoven
-            </a>
-        </li>
-        <li>
-            <a href="https://www.archive.org/download/CanonInD_261/CanoninD.mp3">
-                    Canon in D Pachabel
-            </a>
-        </li>
-        <li>
-            <a href="https://www.archive.org/download/PatrikbkarlChamberSymph/PatrikbkarlChamberSymph_vbr_mp3.zip">
-                    patrikbkarl chamber symph
-            </a>
-        </li>
-    </ul>
     <div class="post-title" id="Login2">
         <h4 class="pdf-upload">No Sheets? Upload!</h4>
     </div>
@@ -56,7 +34,7 @@
              <input type="file" name="pdffile" id="pdffile"><br>
         </div>
         <div class="submit-button">
-            <input type="submit" name="pdfSubmitButton" value="pdfSubmitButton">
+            <input type="submit" name="pdfSubmitButton" value="Submit">
         </div>
      </form>
     </div>

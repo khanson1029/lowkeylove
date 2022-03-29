@@ -1,5 +1,6 @@
 <?php
   session_start();
+  ini_set('display_errors', 1);
   require_once("Dao.php");
 
   // save a product, including name, description, and an image path
