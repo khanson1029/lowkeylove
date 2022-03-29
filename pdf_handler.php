@@ -5,7 +5,7 @@
 
   // save a product, including name, description, and an image path
   if(isset($_POST["pdfSubmitButton"])){
-    $name = $_POST['pdfname'];
+    $songname = $_POST['pdfname'];
     $description = $_POST['pdfdescription'];
     $author = $_SESSION['username']; 
   }else{
@@ -28,7 +28,7 @@
   }
   try{
     $dao = new Dao();
-    $dao->savePdf($name, $description, $imagePath, $author);
+    $dao->savePdf($songname, $description, $imagePath, $author);
   } catch (Exception $e){
       var_dump($e);
         die;
