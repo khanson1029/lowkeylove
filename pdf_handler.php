@@ -4,14 +4,16 @@
   require_once("Dao.php");
 
   // save a product, including name, description, and an image path
-  if(isset($_POST["pdfSubmitButton"])){
-    $songname = $_POST['pdfname'];
-    $description = $_POST['pdfdescription'];
-    $author = $_SESSION['username']; 
-  }else{
-      header("Location:myaccount.php");exit;
-  }
-
+//   if(isset($_POST["pdfSubmitButton"])){
+//     $songname = $_POST['pdfname'];
+//     $description = $_POST['pdfdescription'];
+//     $author = $_SESSION['username']; 
+//   }else{
+//       header("Location:myaccount.php");exit;
+//   }
+  $name = (isset($_POST["name"])) ? $_POST["name"] : "";
+  $description = (isset($_POST["description"])) ? $_POST["description"] : "";
+  $author = $_SESSION['username'];
   $imagePath = "";
   if (count($_FILES) > 0) {
     if ($_FILES["pdffile"]["error"] > 0) {
