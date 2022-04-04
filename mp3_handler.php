@@ -9,12 +9,13 @@
   $author = $_SESSION['username'];
   $imagePath = "";
   if (count($_FILES) > 0) {
+    echo print_r($_FILES, 1);
+    exit;
     if ($_FILES["mpegfile"]["error"] > 0) {
       throw new Exception("Error: " . $_FILES["mpegfile"]["error"]);
     } else {
       $basePath = "/app/";
-      echo print_r($_FILES, 1);
-      exit;
+
       $imagePath = "/music/" . $_FILES["mpegfile"]["name"];
       if (!move_uploaded_file($_FILES["mpegfile"]["tmp_name"], $basePath . $imagePath)) {
         throw new Exception("File move failed");
