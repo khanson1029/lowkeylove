@@ -46,7 +46,7 @@
       </div>
     </div>
     <script  src="js/player.js"></script>
-    <div>
+    <div id="mp3-playlist">
       <ul id="playlist">
         <?php
             $directory = "music/*.mp3";
