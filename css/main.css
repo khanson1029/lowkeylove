@@ -313,6 +313,7 @@ ol, ul {
   display: grid;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: auto;
   grid-template-rows: 6px auto;
 }
 .audio-player .timeline {
