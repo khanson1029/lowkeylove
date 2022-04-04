@@ -176,7 +176,7 @@ class Dao {
     return reset($q->fetchAll());
   }
 
-  public function saveMpeg ($name, $description, $mpegPath) {
+  public function saveMpeg ($name, $description, $mpegPath, $author) {
     $conn = $this->getConnection();
     $saveQuery =
         "INSERT INTO mp3s
@@ -186,7 +186,7 @@ class Dao {
     $q = $conn->prepare($saveQuery);
     $q->bindParam(":mp3_location", $mpegPath);
     $q->bindParam(":song_name", $name);
-    $q->bindParam(":song_author", $_SESSION['username']);
+    $q->bindParam(":song_author", $author);
     $q->bindParam(":mp3_description", $description);
     $q->execute();
   }

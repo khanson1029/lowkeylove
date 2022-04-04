@@ -9,7 +9,7 @@
   $author = $_SESSION['username'];
   $imagePath = "";
   if (count($_FILES) > 0) {
-    // echo print_r($_FILES, 1);
+    echo print_r($_FILES, 1);
     // exit;
     if ($_FILES["mpegfile"]["error"] > 0) {
       throw new Exception("Error: " . $_FILES["mpegfile"]["error"]);
@@ -24,7 +24,7 @@
   }
   try{
     $dao = new Dao();
-    $dao->saveMpeg($songname, $description, $imagePath);
+    $dao->saveMpeg($songname, $description, $imagePath, $author);
   } catch (Exception $e){
     var_dump($e);
       die;
