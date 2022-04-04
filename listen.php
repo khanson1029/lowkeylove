@@ -49,18 +49,17 @@
     <script  src="js/player.js"></script>
     <div id="mp3-playlist">
       <ul id="playlist">
-        <?php
-            $directory = "music/*.mp3";
-            $files = glob($directory);
-            $i=0;
-            foreach($files as $file){?>
                 <li class="active" id="<?php $i;?>"> 
-                    <a class="mp3-listen-object-container" href="
-                        <?php echo $file; ?>">
-                        Sorry, your browser isn't compatible with this mp3 viewer.
-                    </a>
+                  <?php
+                    $directory = "music/*.mp3";
+                    $files = glob($directory);
+                    $i=0;
+                    foreach($files as $file){?>
+                      <a class="mp3-listen-object-container" href="
+                          <?php echo $file;?>">
+                      </a>
+                    <?php $i++;} ?>
                 </li>
-            <?php $i++;} ?>
       </ul>
     </div>
 

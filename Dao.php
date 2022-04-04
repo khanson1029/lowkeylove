@@ -199,4 +199,12 @@ class Dao {
     $q->execute();
     return reset($q->fetchAll());
   }
+
+  public function getSongTitles(){
+    $conn = $this->getConnection();
+    $getQuery = "SELECT song_name FROM mp3s";
+    $q = $conn->prepare($getQuery);
+    $q->execute();
+    return $q->fetchAll();
+  }
 }
