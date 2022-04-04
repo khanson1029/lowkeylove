@@ -56,7 +56,7 @@
             foreach($files as $file){?>
                 <li class="active" id="<?php $i;?>"> 
                     <a class="mp3-listen-object-container" href="
-                        <?php $directory = "music/"; print(@$files[$i]); ?>">
+                        <?php print(@$files[$i]); ?>">
                         Sorry, your browser isn't compatible with this mp3 viewer.
                     </a>
                 </li>
