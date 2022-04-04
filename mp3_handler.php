@@ -9,8 +9,8 @@
   $author = $_SESSION['username'];
   $imagePath = "";
   if (count($_FILES) > 0) {
-    echo print_r($_FILES, 1);
-    exit;
+    // echo print_r($_FILES, 1);
+    // exit;
     if ($_FILES["mpegfile"]["error"] > 0) {
       throw new Exception("Error: " . $_FILES["mpegfile"]["error"]);
     } else {
