@@ -1,0 +1,1 @@
+This folder dynamically changes as songs are added or removed.  This file acts as a placeholder for git, in case the folder is empty at any point in time.
