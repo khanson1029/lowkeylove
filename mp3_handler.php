@@ -1,6 +1,7 @@
 <?php
   session_start();
   ini_set('display_errors', 1);
+  ini_set('upload_max_filesize', '10M');
   require_once "Dao.php";
 
   // save a product, including name, description, and an image path
