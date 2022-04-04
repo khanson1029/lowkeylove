@@ -4,7 +4,7 @@
   require_once "Dao.php";
 
   // save a product, including name, description, and an image path
-  $name = (isset($_POST["mpegsongname"])) ? $_POST["mpegsongname"] : "";
+  $songname = (isset($_POST["mpegsongname"])) ? $_POST["mpegsongname"] : "";
   $description = (isset($_POST["mpegsongdescription"])) ? $_POST["mpegsongdescription"] : "";
   $author = $_SESSION['username'];
   $imagePath = "";
@@ -24,7 +24,7 @@
   }
   try{
     $dao = new Dao();
-    $dao->saveMpeg($name, $description, $imagePath);
+    $dao->saveMpeg($songname, $description, $imagePath);
   } catch (Exception $e){
     var_dump($e);
       die;
