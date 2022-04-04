@@ -1,1 +1,1 @@
-This folder dynamically changes as sheet music is added or removed.  This file acts as a placeholder for git, in case the folder is empty at any point in time.
+This folder dynamically changes as sheet music is added or removed.  This file acts as a placeholder for git, in case the folder is empty at any point.
