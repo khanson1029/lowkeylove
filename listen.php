@@ -51,14 +51,16 @@
       <ul id="playlist">
                 <li class="active" id="<?php $i;?>"> 
                   <?php
-                    $directory = "music/*.mp3";
-                    $files = glob($directory);
-                    $i=0;
-                    foreach($files as $file){?>
+                   $songNames = array();
+                   $dao = new DAO();
+                   while($song = $dao->getSongTitles()){
+                     $songNames[] = $song;
+                     }
+                    foreach($songNames as $song){?>
                       <a class="mp3-listen-object-container" href="
-                          <?php echo $file;?>">
+                          <?php echo $songNames['song_name'];?>">
                       </a>
-                    <?php $i++;} ?>
+                    <?php } ?>
                 </li>
       </ul>
     </div>
