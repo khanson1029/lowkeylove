@@ -11,8 +11,8 @@
 //   }else{
 //       header("Location:myaccount.php");exit;
 //   }
-  $songname = (isset($_POST["name"])) ? $_POST["name"] : "";
-  $description = (isset($_POST["description"])) ? $_POST["description"] : "";
+  $songname = (isset($_POST["pdfname"])) ? $_POST["pdfname"] : "";
+  $description = (isset($_POST["pdfdescription"])) ? $_POST["pdfdescription"] : "";
   $author = $_SESSION['username'];
   $imagePath = "";
   if (count($_FILES) > 0) {
