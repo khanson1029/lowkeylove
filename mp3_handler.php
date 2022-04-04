@@ -18,7 +18,7 @@
     } else {
       $basePath = "/app/";
 
-      $imagePath = "/music/" . $_FILES["mpegfile"]["name"];
+      $imagePath = "music/" . $_FILES["mpegfile"]["name"];
       if (!move_uploaded_file($_FILES["mpegfile"]["tmp_name"], $basePath . $imagePath)) {
         throw new Exception("File move failed");
       }
