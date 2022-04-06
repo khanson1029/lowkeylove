@@ -3,7 +3,7 @@ require_once "User.php";
 // Dao.php
 class Dao {
   
-  private $host = "us-cdbr-east-05.cleardb.net";
+  private $host = "localhost"; //"us-cdbr-east-05.cleardb.net";
   private $db = "heroku_0fbcb350a533112";
   private $user = "b991e131224871";
   private $pass = "43f12b19";
