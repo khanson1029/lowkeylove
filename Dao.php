@@ -4,9 +4,9 @@ require_once "User.php";
 class Dao {
   
   private $host = "us-cdbr-east-05.cleardb.net";
-  private $db = "heroku_5df2d48f062ccf3";
-  private $user = "ba9d8d486aa03b";
-  private $pass = "0acb9171";
+  private $db = "heroku_0fbcb350a533112";
+  private $user = "b991e131224871";
+  private $pass = "43f12b19";
 
   //setup User objects
   private $userFile = "users.txt";
