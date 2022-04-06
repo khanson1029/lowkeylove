@@ -7,16 +7,16 @@
       $password = hash("sha256", $_POST['password'] . "fKd93Vmz!k*dAv5029Vkf9$3Aa");
       $_SESSION['username'] = $username;
     }
-    
+
     $dao = new Dao();
     $_SESSION['authenticated'] = $dao->userExists($username, $password);
-    echo "hi";
+
     if($_SESSION['authenticated']){
-      header("Location:/app/myaccount.php");
+      header("Location:myaccount.php");
       exit;
     }else{
       $_SESSION['authenticated'] = false;
-      header("Location:/app/login.php");
+      header("Location:login.php");
       exit;
     }
 ?> 

@@ -10,6 +10,7 @@
   $description = (isset($_POST["mpegsongdescription"])) ? $_POST["mpegsongdescription"] : "";
   $author = $_SESSION['username'];
   $imagePath = "";
+  $_SESSION['songnames'] = $songname; 
   if (count($_FILES) > 0) {
     echo print_r($_FILES, 1);
     // exit;
