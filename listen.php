@@ -18,34 +18,6 @@
             </article>
         </section>
     </div>
-    
-    <!-- <div class="audio-player">
-      <div class="timeline">
-        <div class="progress"></div>
-      </div>
-      <div class="controls">
-        <div class="play-container">
-          <div class="toggle-play play">
-        </div>
-        </div>
-        <div class="time">
-          <div class="current">0:00</div>
-          <div class="divider">/</div>
-          <div class="length"></div>
-        </div>
-        <div class="name">Music Song</div> -->
-    <!--     credit for icon to https://saeedalipoor.github.io/icono/ -->
-        <!-- <div class="volume-container">
-          <div class="volume-button">
-            <div class="volume icono-volumeMedium"></div>
-          </div>
-          
-          <div class="volume-slider">
-            <div class="volume-percentage"></div>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <script type="text/javascript">
       $(document).ready(function(){
@@ -61,6 +33,14 @@
     <div id="mp3-playlist">
       <ul id="playlist">
         <li class = "active"> 
+              <audio id="nav_audio">
+                  <source src="/music/Watercolors.mp3" type="audio/mpeg"></source>
+              </audio>
+          <!-- <a href="/music/Watercolors.mp3">Watercolors
+              <audio id="nav_audio">
+                  <source src="/music/Watercolors.mp3" type="audio/mpeg"></source>
+              </audio>
+          </a> -->
         <?php 
                   $dao = new Dao();
                   $songArr = $dao->getMpegs();
