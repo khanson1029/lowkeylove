@@ -49,7 +49,7 @@
     <script  src="js/player.js"></script>
     <div id="mp3-playlist">
       <ul id="playlist">
-                <li class="active" id="<?php $i;?>"> 
+                <li> 
                   <?php
                    $dao = new Dao();
                    $songNames = $dao->getSongTitles();
