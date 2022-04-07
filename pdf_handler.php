@@ -35,6 +35,6 @@
       var_dump($e);
         die;
     }
-  header("Location:myaccount.php");
+  header("Location:learn.php");
   exit;
   

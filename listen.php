@@ -49,17 +49,19 @@
     <script  src="js/player.js"></script>
     <div id="mp3-playlist">
       <ul id="playlist">
-        <?php
-            $directory = "music/*.mp3";
-            $files = glob($directory);
-            $i=0;
-            foreach($files as $file){?>
-                <li class="active" id="<?php $i;?>"> 
-                    <a class="mp3-listen-object-container" href="
-                        <?php $dao = new Dao(); $file->getSongTitles();?>">
-                    </a>
-                </li>
-            <?php $i++;} ?>
+        <li class = "active"> 
+            <a class="mp3-listen-object-container" href="
+              <?php 
+                // $directory = "music/*.mp3";
+                // $files = glob($directory);
+                  $dao = new Dao();
+                  // $songPath = $dao->getPath();
+                   $songNames = $dao->getSongTitles();
+                  $product = $dao->getMpeg($_SESSION['username']);
+                  echo $product['mp3_location'];?>">
+              <?php echo $songNames;?>
+            </a>
+        </li>
       </ul>
     </div>
 

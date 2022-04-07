@@ -195,7 +195,7 @@ class Dao {
     $conn = $this->getConnection();
     $getQuery = "SELECT song_author, song_name, mp3_description, mp3_location FROM mp3s WHERE song_author = :user";
     $q = $conn->prepare($getQuery);
-    $q->bindParam(":id", $id);
+    $q->bindParam(":user", $user);
     $q->execute();
     return reset($q->fetchAll());
   }

@@ -33,5 +33,5 @@
       die;
   }
 
-  header("Location:myaccount.php");
+  header("Location:listen.php");
   exit;
