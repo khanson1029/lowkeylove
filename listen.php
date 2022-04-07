@@ -53,7 +53,7 @@
         <?php 
                   $dao = new Dao();
                   $songArr = $dao->getMpegs();
-                  echo $songArr;
+                  echo $songArr['mp3_location'];
                   // $songPath = $dao->getPath();
                   // $songNames = $dao->getSongTitles();
                   foreach($songNames as $song){
