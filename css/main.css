@@ -179,7 +179,7 @@ h4 {
 }
 
 #playlist,audio{background: #5b5c5e; ;width:400px;padding:20px;}
-.active {color: #c9b351;text-decoration:none;}
+.active :hover {color: #c9b351;text-decoration:none;}
 
 #logo-main {
     display:flex;

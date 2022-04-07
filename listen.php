@@ -19,7 +19,7 @@
         </section>
     </div>
     
-    <div class="audio-player">
+    <!-- <div class="audio-player">
       <div class="timeline">
         <div class="progress"></div>
       </div>
@@ -33,9 +33,9 @@
           <div class="divider">/</div>
           <div class="length"></div>
         </div>
-        <div class="name">Music Song</div>
+        <div class="name">Music Song</div> -->
     <!--     credit for icon to https://saeedalipoor.github.io/icono/ -->
-        <div class="volume-container">
+        <!-- <div class="volume-container">
           <div class="volume-button">
             <div class="volume icono-volumeMedium"></div>
           </div>
@@ -45,8 +45,19 @@
           </div>
         </div>
       </div>
-    </div>
-    <script  src="js/player.js"></script>
+    </div> -->
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+      $("a").hover(function(){
+        nav_audio.play();
+        },
+      function(){
+        nav_audio.load();
+        });
+      });
+    </script>
+
     <div id="mp3-playlist">
       <ul id="playlist">
         <li class = "active"> 
@@ -54,14 +65,15 @@
                   $dao = new Dao();
                   $songArr = $dao->getMpegs();
                   echo $songArr['mp3_location'];
-                  // $songPath = $dao->getPath();
-                  // $songNames = $dao->getSongTitles();
                   foreach($songArr as $song){
         ?>
               <a class="mp3-listen-object-container" href="
 
               <?php echo $song['mp3_location'];?>">
               <?php echo $song['song_name'];?>
+                    <audio id="nav_audio">
+                        <source src="<?php echo $song['mp3_location'];?>" type="audio/mpeg"></source>
+                    </audio>
             </a>
           <?php }  ?>
         </li>
