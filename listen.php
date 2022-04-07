@@ -52,10 +52,12 @@
         <li class = "active"> 
             <a class="mp3-listen-object-container" href="
               <?php 
+                $directory = "music/*.mp3";
+                $files = glob($directory);
                   $dao = new Dao();
                   $songPath = $dao->getPath();
                   $songNames = $dao->getSongTitles();
-                  echo $songPath;?>">
+                  echo $files;?>">
               <?php echo $songNames;?>
             </a>
         </li>
