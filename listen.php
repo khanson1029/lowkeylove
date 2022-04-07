@@ -55,10 +55,9 @@
                 // $directory = "music/*.mp3";
                 // $files = glob($directory);
                   $dao = new Dao();
-                  // $songPath = $dao->getPath();
-                   $songNames = $dao->getSongTitles();
-                  $product = $dao->getMpeg($_SESSION['username']);
-                  echo $product['mp3_location'];?>">
+                  $songPath = $dao->getPath();
+                  $songNames = $dao->getSongTitles();
+                  echo $songPath;?>">
               <?php echo $songNames;?>
             </a>
         </li>
