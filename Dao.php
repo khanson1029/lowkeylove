@@ -193,10 +193,10 @@ class Dao {
 
   public function getMpegs () {
     $conn = $this->getConnection();
-    $getQuery = "SELECT * FROM mp3s";
+    $getQuery = "SELECT mp3_location, song_name FROM mp3s";
     $q = $conn->prepare($getQuery);
     $q->execute();
-    return reset($q->fetchAll());
+    return $q->fetchAll();
   }
 
   public function getSongTitles(){
