@@ -205,6 +205,6 @@ class Dao {
     $getQuery = "SELECT song_name FROM mp3s";
     $q = $conn->prepare($getQuery);
     $q->execute();
-    return $q->fetchAll();
+    return $q->fetchColumn();
   }
 }
