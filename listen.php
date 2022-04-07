@@ -52,8 +52,7 @@
                 <li class="active" id="<?php $i;?>"> 
                   <?php
                    $dao = new Dao();
-                   $songNames = array();
-                   $songNames[] = $dao->getSongTitles();
+                   $songNames = $dao->getSongTitles();
                     echo $songNames;
                     foreach($songNames as $song){?>
                       <a class="mp3-listen-object-container" href="
