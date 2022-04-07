@@ -191,11 +191,10 @@ class Dao {
     $q->execute();
   }
 
-  public function getMpeg ($user) {
+  public function getMpeg () {
     $conn = $this->getConnection();
-    $getQuery = "SELECT song_author, song_name, mp3_description, mp3_location FROM mp3s WHERE song_author = :user";
+    $getQuery = "SELECT * FROM mp3s";
     $q = $conn->prepare($getQuery);
-    $q->bindParam(":user", $user);
     $q->execute();
     return reset($q->fetchAll());
   }

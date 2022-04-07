@@ -52,14 +52,15 @@
         <li class = "active"> 
         <?php 
                   $dao = new Dao();
-                  $songPath = $dao->getPath();
-                  $songNames = $dao->getSongTitles();
+                  $songArr = $dao->getMpegs();
+                  // $songPath = $dao->getPath();
+                  // $songNames = $dao->getSongTitles();
                   foreach($songNames as $song){
         ?>
               <a class="mp3-listen-object-container" href="
 
-              <?php echo $songPath;?>">
-              <?php echo $songNames;?>
+              <?php echo $song['mp3_location'];?>">
+              <?php echo $song['song_name'];?>
             </a>
           <?php }  ?>
         </li>
