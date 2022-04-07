@@ -17,7 +17,7 @@
     if ($_FILES["mpegfile"]["error"] > 0) {
       throw new Exception("Error: " . $_FILES["mpegfile"]["error"]);
     } else {
-      $basePath = "/app/";
+      $basePath = "/app";
 
       $imagePath = "/music/" . $_FILES["mpegfile"]["name"];
       if (!move_uploaded_file($_FILES["mpegfile"]["tmp_name"], $basePath . $imagePath)) {
