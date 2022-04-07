@@ -191,7 +191,7 @@ class Dao {
     $q->execute();
   }
 
-  public function getMpeg () {
+  public function getMpegs () {
     $conn = $this->getConnection();
     $getQuery = "SELECT * FROM mp3s";
     $q = $conn->prepare($getQuery);
