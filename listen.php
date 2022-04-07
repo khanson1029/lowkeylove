@@ -50,17 +50,15 @@
     <div id="mp3-playlist">
       <ul id="playlist">
                 <li class="active" id="<?php $i;?>"> 
-                  <!-- <?php
-                  //  $songNames = array();
-                  //  $dao = new DAO();
-                  //  while($song = $dao->getSongTitles()){
-                  //    $songNames[] = $_SESSION["songnames"];
-                  //    }
-                  //   foreach($songNames as $song){?>
+                  <?php
+                   $songNames = array();
+                   $songNames[] = $_SESSION["songnames"];
+
+                    foreach($songNames as $song){?>
                       <a class="mp3-listen-object-container" href="
-                          //<?//php echo $song;?>">
+                          <?php echo $song;?>">
                       </a>
-                   // <?php //} ?> -->
+                    <?php } ?>
                 </li>
       </ul>
     </div>
