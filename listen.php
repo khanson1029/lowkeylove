@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require_once "Dao.php";
     if(!isset($_SESSION['authenticated']) || !$_SESSION['authenticated']){
             header("Location:login.php");
     }
@@ -47,22 +46,20 @@
       </div>
     </div>
     <script  src="js/player.js"></script>
-    <div id="mp3-playlist">
-      <ul id="playlist">
-        <li class = "active"> 
-            <a class="mp3-listen-object-container" href="
-              <?php 
-                $directory = "music/*.mp3";
-                $files = glob($directory);
-                  $dao = new Dao();
-                  $songPath = $dao->getPath();
-                  $songNames = $dao->getSongTitles();
-                  print(@$files[0]);?>">
-              <?php echo $songNames;?>
-            </a>
-        </li>
-      </ul>
-    </div>
-
+    <div></div>
+    <ul id="playlist">
+      <?php
+          $directory = "music/*.mp3";
+          $files = glob($directory);
+          $i=0;
+          foreach($files as $file){?>
+              <li class="active" id="<?php $i;?>"> 
+                  <a class="mp3-listen-object-container" href="
+                      <?php print($file);?>">
+                      Sorry, your browser isn't compatible with this mp3 viewer.
+                  </a>
+              </li>
+          <?php $i++;} ?>
+    </ul>
 <?php require_once 'comments.php'; ?>
 <?php require_once 'footer.php'; ?>
