@@ -57,7 +57,7 @@
                     echo $songNames;
                     foreach($songNames as $song){?>
                       <a class="mp3-listen-object-container" href="
-                          <?php echo "/app/"; echo $songPath;?>">
+                          <?php echo "/app/" . $songPath;?>">
                           <?php echo $songNames;?>
                       </a>
                     <?php } ?>
