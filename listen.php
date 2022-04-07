@@ -57,7 +57,7 @@
                   $dao = new Dao();
                   $songPath = $dao->getPath();
                   $songNames = $dao->getSongTitles();
-                  echo $files[0];?>">
+                  print(@$files[0]);?>">
               <?php echo $songNames;?>
             </a>
         </li>
