@@ -56,7 +56,7 @@
                   echo $songArr['mp3_location'];
                   // $songPath = $dao->getPath();
                   // $songNames = $dao->getSongTitles();
-                  foreach($songNames as $song){
+                  foreach($songArr as $song){
         ?>
               <a class="mp3-listen-object-container" href="
 
