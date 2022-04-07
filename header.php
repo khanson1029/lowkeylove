@@ -8,7 +8,7 @@
 <link rel="shortcut icon" type="image/ico" href="/images/eigth-note.ico"/>
 <style>
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <body>
 
 <div class="main-grid-container">

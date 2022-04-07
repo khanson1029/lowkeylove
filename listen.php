@@ -33,10 +33,7 @@
     <div id="mp3-playlist">
       <ul id="playlist">
         <li class = "active"> 
-              <audio id="nav_audio">
-                  <source src="/music/Watercolors.mp3" type="audio/mpeg"></source>
-              </audio>
-          <!-- <a href="/music/Watercolors.mp3">Watercolors
+          <!-- <a>Watercolors
               <audio id="nav_audio">
                   <source src="/music/Watercolors.mp3" type="audio/mpeg"></source>
               </audio>
