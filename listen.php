@@ -46,7 +46,7 @@
       </div>
     </div>
     <script  src="js/player.js"></script>
-    <div></div>
+    <div>
     <ul id="playlist">
       <?php
           $directory = "music/*.mp3";
@@ -61,5 +61,7 @@
               </li>
           <?php $i++;} ?>
     </ul>
+    </div>
+
 <?php require_once 'comments.php'; ?>
 <?php require_once 'footer.php'; ?>
