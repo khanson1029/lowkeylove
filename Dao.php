@@ -207,4 +207,12 @@ class Dao {
     $q->execute();
     return $q->fetchColumn();
   }
+
+  public function getPath(){
+    $conn = $this->getConnection();
+    $getQuery = "SELECT mp3_location FROM mp3s";
+    $q = $conn->prepare($getQuery);
+    $q->execute();
+    return $q->fetchColumn();
+  }
 }

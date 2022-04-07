@@ -49,14 +49,16 @@
     <script  src="js/player.js"></script>
     <div id="mp3-playlist">
       <ul id="playlist">
-                <li> 
+                <li class = "active"> 
                   <?php
                    $dao = new Dao();
                    $songNames = $dao->getSongTitles();
+                   $songPath = $dao->getPath();
                     echo $songNames;
                     foreach($songNames as $song){?>
                       <a class="mp3-listen-object-container" href="
-                          <?php echo $songNames;?>">
+                          <?php echo $songPath;?>">
+                          <?php echo $songNames;?>
                       </a>
                     <?php } ?>
                 </li>
