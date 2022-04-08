@@ -51,7 +51,7 @@
        $(document).ready(function(){
        var audioElement = new Audio(); 
 
-       $("#play").click(function(){
+       $("button").click(function(){
         $("#nav_audio").trigger('play');
        },
       function(){
@@ -76,14 +76,14 @@
                       <div class="controls">
                         <div class="play-container">
                         <button id="pause"></button>
-                        <div class="toggle-play play" id="play">    
+                        <button class="toggle-play play" id="play">    
                                 <a class="mp3-listen-object-container" href="
                                   <?php echo $song['mp3_location'];?>">
                                       <audio id="nav_audio">
                                           <source src="<?php echo $song['mp3_location'];?>" type="audio/mpeg"></source>
                                       </audio>
                                 </a>
-                        </div>
+                        </button>
                         </div>
                         <div class="time" id="currentTime">
                           <div class="current">0:00</div>
