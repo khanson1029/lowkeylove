@@ -18,38 +18,6 @@
             </article>
         </section>
     </div>
-    <script type="text/javascript">
-            $(document).ready(function() {
-
-            var btn = $(".toggle-play play");
-            btn.click(function() {
-              btn.toggleClass("paused");
-              return false;
-          });
-          var audioElement = document.createElement('audio');
-          audioElement.setAttribute('src', '/music/Watercolors.mp3');
-          
-          audioElement.addEventListener('ended', function() {
-              this.play();
-          }, false);
-          
-          audioElement.addEventListener("timeupdate",function(){
-              $("#currentTime").text(audioElement.currentTime/60 + ":", audioElement.currentTime);
-          });
-          
-          $('#play').click(function() {
-              audioElement.play();
-              $("#status").text("Status: Playing");
-          });
-          
-          $('#pause').click(function() {
-              audioElement.pause();
-              $("#status").text("Status: Paused");
-          });
-          
-
-      });
-    </script>
 
     <div id="mp3-playlist">
       <ul id="playlist">
@@ -60,6 +28,32 @@
                   echo $songArr['mp3_location'];
                   foreach($songArr as $song){
         ?>
+        <script type="text/javascript">
+            $(document).ready(function() {
+            var audioElement = document.createElement('audio');
+            audioElement.setAttribute('src', '<?php echo $song['mp3_location'];?>');
+            
+            audioElement.addEventListener('ended', function() {
+                this.play();
+            }, false);
+            
+            audioElement.addEventListener("timeupdate",function(){
+                $("#currentTime").text(audioElement.currentTime);
+            });
+            
+            $('#play').click(function() {
+                audioElement.play();
+                $("#status").text("Status: Playing");
+            });
+            
+            $('#pause').click(function() {
+                audioElement.pause();
+                $("#status").text("Status: Paused");
+            });
+            
+
+        });
+      </script>
                         <div class="audio-player">
                       <div class="timeline">
                         <div class="progress"></div>
