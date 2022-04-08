@@ -144,7 +144,7 @@
                     </div>
       
         </li>
-      <?php }  ?>
+      <?php $count++; }  ?>
       </ul>
     </div>
 
