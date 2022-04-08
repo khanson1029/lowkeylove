@@ -108,7 +108,7 @@
           $count = 0;
           foreach($songArr as $song){
         ?>
-        <li class="active" data-filename=<?php $song['mp3_location'] ?>> 
+        <li class="active" data-filename="<?php $song['mp3_location'] ?>"> 
 
                         <div class="audio-player">
                       <div class="timeline">
