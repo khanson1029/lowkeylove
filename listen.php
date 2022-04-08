@@ -19,7 +19,7 @@
         </section>
     </div>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
           $(document).ready(function() {
           
           var files = document.getElementById("active");
@@ -46,20 +46,19 @@
           
 
       });
-    </script>
-    <!-- <script type="text/javascript">
+    </script> -->
+    <script type="text/javascript">
        $(document).ready(function(){
        var audioElement = new Audio(); 
 
        $("ul li").hover(function(){
         nav_audio.play();
-        $("#currentTime").text();
        },
       function(){
          nav_audio.load();
         });
        });
-    </script> -->
+    </script>
     <div id="mp3-playlist">
       <ul id="playlist">
       <?php 
@@ -86,11 +85,11 @@
                                 </a>
                         </div>
                         </div>
-                        <div class="time" id="currentTime">
+                        <!-- <div class="time" id="currentTime">
                           <div class="current">0:00</div>
                           <div class="divider">/</div>
                           <div class="length"></div>
-                        </div>
+                        </div> -->
                         <div class="name"><?php echo $song['song_name'];?></div> 
                         <div class="volume-container">
                           <div class="volume-button">
