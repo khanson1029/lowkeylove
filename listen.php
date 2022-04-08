@@ -49,12 +49,13 @@
     </script> -->
     <script type="text/javascript">
        $(document).ready(function(){
-      
+       var audioElement = new Audio(); 
+
        $("#play").click(function(){
-        nav_audio.play();
+        $("#nav_audio").trigger('play');
        },
       function(){
-         nav_audio.load();
+         $('#nav_audio').trigger('load');
         });
        });
     </script>
