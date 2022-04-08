@@ -34,7 +34,7 @@
             // Add click listener.
             $('#play').click(function() {
               var $button = $(this);    
-              var audio = $button.find('audio')[0]; // <-- Interact with this!
+              var audio = $button.find('audio')[i]; // <-- Interact with this!
               
               // Toggle play/pause
               if (playing !== true) {
