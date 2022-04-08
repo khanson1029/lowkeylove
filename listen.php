@@ -19,35 +19,59 @@
         </section>
     </div>
 
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
           $(document).ready(function() {
-          
-          var files = document.getElementById("active");
-          var audioElement = document.createElement('audio');
-          audioElement.setAttribute('src', files.);
-          
-          audioElement.addEventListener('ended', function() {
-              this.play();
-          }, false);
-          
-          audioElement.addEventListener("timeupdate",function(){
-              $("#currentTime").text(audioElement.currentTime);
-          });
-          
-          $('#play').click(function() {
-              audioElement.play();
-              $("#status").text("Status: Playing");
-          });
-          
-          $('#pause').click(function() {
-              audioElement.pause();
-              $("#status").text("Status: Paused");
-          });
+            var playing = false;
+
+             // Add file names.
+            $('#play').each(function() {
+              var $button = $(this);    
+              var $audio = $button.find('audio');
+              
+              $($('<span>').text($audio.attr('src'))).insertBefore($audio);
+            });
+
+            // Add click listener.
+            $('#play').click(function() {
+              var $button = $(this);    
+              var audio = $button.find('audio')[0]; // <-- Interact with this!
+              
+              // Toggle play/pause
+              if (playing !== true) {
+                audio.play();
+              } else {
+                audio.pause();
+              }
+
+              // Flip state
+              $button.toggleClass('playing');
+              playing = !playing
+            // var files = document.getElementById("active");
+            // var audioElement = document.createElement('audio');
+            // audioElement.setAttribute('src', files.);
+            
+            // audioElement.addEventListener('ended', function() {
+            //     this.play();
+            // }, false);
+            
+            // audioElement.addEventListener("timeupdate",function(){
+            //     $("#currentTime").text(audioElement.currentTime);
+            // });
+            
+            // $('#play').click(function() {
+            //     audioElement.play();
+            //     $("#status").text("Status: Playing");
+            // });
+            
+            // $('#pause').click(function() {
+            //     audioElement.pause();
+            //     $("#status").text("Status: Paused");
+            });
           
 
       });
-    </script> -->
-    <script type="text/javascript">
+    </script>
+    <!-- <script type="text/javascript">
        $(document).ready(function(){
        var audioElement = new Audio(); 
 
@@ -58,14 +82,14 @@
          nav_audio.load();
         });
        });
-    </script>
+    </script> -->
     <div id="mp3-playlist">
       <ul id="playlist">
       <?php 
-                  $dao = new Dao();
-                  $songArr = $dao->getMpegs();
-                  echo $songArr['mp3_location'];
-                  foreach($songArr as $song){
+          $dao = new Dao();
+          $songArr = $dao->getMpegs();
+          echo $songArr['mp3_location'];
+          foreach($songArr as $song){
         ?>
         <li class = "active"> 
 
