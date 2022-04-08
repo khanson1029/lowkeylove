@@ -21,8 +21,27 @@
 
     <script type="text/javascript">
           $(document).ready(function() {
-            // var playing = false;
+            var count = false;
+            var count = 0;
 
+            $('.active').each(function() {
+              var filename = $(this).data('filename');
+              var audioElement = document.createElement('audio');
+
+              audioElement.setAttribute('src', filename);
+
+              $('.play' + count).click(function(){
+                audioElement.play();
+                // I need to put something here to make all the other songs pause/reset //
+              });
+
+              $('.stop' + count).click(function(){
+                audioElement.pause();
+                audioElement.currentTime = 0;
+              });
+
+              count++;
+            });
             //  // Add file names.
             // $('#play').each(function() {
             //   var $button = $(this);    
@@ -47,23 +66,23 @@
             //   $button.toggleClass('playing');
             //   playing = !playing
             // var files = document.getElementById("active");
-            var audioElement = document.createElement('audio');
+            // var audioElement = document.createElement('audio');
             
             
-            audioElement.addEventListener("timeupdate",function(){
-                $("#currentTime").text(audioElement.currentTime);
-            });
+            // audioElement.addEventListener("timeupdate",function(){
+            //     $("#currentTime").text(audioElement.currentTime);
+            // });
             
-            $('#play').click(function() {
-                audioElement.getAttribute('src');
-                audioElement.play();
-                $("#status").text("Status: Playing");
-            });
+            // $('#play').click(function() {
+            //     audioElement.getAttribute('src');
+            //     audioElement.play();
+            //     $("#status").text("Status: Playing");
+            // });
             
-            $('#pause').click(function() {
-                audioElement.pause();
-                $("#status").text("Status: Paused");
-            });
+            // $('#pause').click(function() {
+            //     audioElement.pause();
+            //     $("#status").text("Status: Paused");
+            // });
           
 
       });
@@ -86,9 +105,10 @@
           $dao = new Dao();
           $songArr = $dao->getMpegs();
           echo $songArr['mp3_location'];
+          $count = 0;
           foreach($songArr as $song){
         ?>
-        <li class = "active"> 
+        <li class="active" data-filename=<?php $song['mp3_location'] ?>> 
 
                         <div class="audio-player">
                       <div class="timeline">
@@ -97,7 +117,7 @@
                       <div class="controls">
                         <div class="play-container">
                         <!-- <button id="pause"></button> -->
-                        <div class="toggle-play play" id="play">    
+                        <div class="toggle-play play<?php $count; ?>" id="play" >    
                                 <a class="mp3-listen-object-container" href="
                                   <?php echo $song['mp3_location'];?>">
                                       <audio src="<?php echo $song['mp3_location'];?>" type="audio/mpeg"></source>
