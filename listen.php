@@ -55,7 +55,7 @@
             });
             
             $('#play').click(function() {
-                audioElement.getgetAttribute('src');
+                audioElement.getAttribute('src');
                 audioElement.play();
                 $("#status").text("Status: Playing");
             });
