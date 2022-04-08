@@ -19,19 +19,18 @@
         </section>
     </div>
 
-    <div id="mp3-playlist">
-      <ul id="playlist">
-        <li class = "active"> 
-        <?php 
-                  $dao = new Dao();
-                  $songArr = $dao->getMpegs();
-                  echo $songArr['mp3_location'];
-                  foreach($songArr as $song){
-        ?>
-        <script type="text/javascript">
-            $(document).ready(function() {
+    <script type="text/javascript">
+          $(document).ready(function() {
+
+          <?php $dao = new Dao();
+                $songArr = $dao->getMpegs();
+          ?>
+          var passedArray = <?php json_encode($songArr);?>
+
+          for(var i = 0; i < passedArray.length; i++){
+
             var audioElement = document.createElement('audio');
-            audioElement.setAttribute('src', '<?php echo $song['mp3_location'];?>');
+            audioElement.setAttribute('src', passedArray[i]);
             
             audioElement.addEventListener('ended', function() {
                 this.play();
@@ -50,10 +49,20 @@
                 audioElement.pause();
                 $("#status").text("Status: Paused");
             });
-            
 
-        });
-      </script>
+          }
+      });
+    </script>
+
+    <div id="mp3-playlist">
+      <ul id="playlist">
+        <li class = "active"> 
+        <?php 
+                  $dao = new Dao();
+                  $songArr = $dao->getMpegs();
+                  echo $songArr['mp3_location'];
+                  foreach($songArr as $song){
+        ?>
                         <div class="audio-player">
                       <div class="timeline">
                         <div class="progress"></div>
