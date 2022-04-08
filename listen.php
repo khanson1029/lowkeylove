@@ -53,6 +53,7 @@
 
        $("li").hover(function(){
         nav_audio.play();
+        $("#currentTime").text(nav_audio.currentTime);
        },
       function(){
          nav_audio.load();
