@@ -49,7 +49,8 @@
     </script> -->
     <script type="text/javascript">
        $(document).ready(function(){
-       $("div ul li").hover(function(){
+      
+       $("#play").click(function(){
         nav_audio.play();
        },
       function(){
