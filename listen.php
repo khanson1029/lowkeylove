@@ -19,50 +19,54 @@
         </section>
     </div>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
           $(document).ready(function() {
+          
+          var files = document.getElementById("active");
+          var audioElement = document.createElement('audio');
+          audioElement.setAttribute('src', files.);
+          
+          audioElement.addEventListener('ended', function() {
+              this.play();
+          }, false);
+          
+          audioElement.addEventListener("timeupdate",function(){
+              $("#currentTime").text(audioElement.currentTime);
+          });
+          
+          $('#play').click(function() {
+              audioElement.play();
+              $("#status").text("Status: Playing");
+          });
+          
+          $('#pause').click(function() {
+              audioElement.pause();
+              $("#status").text("Status: Paused");
+          });
+          
 
-          <?php $dao = new Dao();
-                $songArr = $dao->getMpegs();
-          ?>
-          var passedArray = <?php json_encode($songArr);?>
-
-          for(var i = 0; i < passedArray.length; i++){
-
-            var audioElement = document.createElement('audio');
-            audioElement.setAttribute('src', passedArray[i]);
-            
-            audioElement.addEventListener('ended', function() {
-                this.play();
-            }, false);
-            
-            audioElement.addEventListener("timeupdate",function(){
-                $("#currentTime").text(audioElement.currentTime);
-            });
-            
-            $('#play').click(function() {
-                audioElement.play();
-                $("#status").text("Status: Playing");
-            });
-            
-            $('#pause').click(function() {
-                audioElement.pause();
-                $("#status").text("Status: Paused");
-            });
-
-          }
       });
+    </script> -->
+    <script type="text/javascript">
+       $(document).ready(function(){
+       $("div ul li").hover(function(){
+        nav_audio.play();
+       },
+      function(){
+         nav_audio.load();
+        });
+       });
     </script>
-
     <div id="mp3-playlist">
       <ul id="playlist">
-        <li class = "active"> 
-        <?php 
+      <?php 
                   $dao = new Dao();
                   $songArr = $dao->getMpegs();
                   echo $songArr['mp3_location'];
                   foreach($songArr as $song){
         ?>
+        <li class = "active"> 
+
                         <div class="audio-player">
                       <div class="timeline">
                         <div class="progress"></div>
@@ -96,8 +100,9 @@
                         </div>
                       </div>
                     </div>
-        <?php }  ?>
+      
         </li>
+      <?php }  ?>
       </ul>
     </div>
 
