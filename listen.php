@@ -103,8 +103,7 @@
                         <div class="toggle-play play" id="play">    
                                 <a class="mp3-listen-object-container" href="
                                   <?php echo $song['mp3_location'];?>">
-                                      <audio id="nav_audio">
-                                          <source src="<?php echo $song['mp3_location'];?>" type="audio/mpeg"></source>
+                                      <audio src="<?php echo $song['mp3_location'];?>" type="audio/mpeg"></source>
                                       </audio>
                                 </a>
                         </div>
