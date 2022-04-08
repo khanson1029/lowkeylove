@@ -21,51 +21,47 @@
 
     <script type="text/javascript">
           $(document).ready(function() {
-            var playing = false;
+            // var playing = false;
 
-             // Add file names.
-            $('#play').each(function() {
-              var $button = $(this);    
-              var $audio = $button.find('audio');
+            //  // Add file names.
+            // $('#play').each(function() {
+            //   var $button = $(this);    
+            //   var $audio = $button.find('audio');
               
-              $($('<span>').text($audio.attr('src'))).insertBefore($audio);
-            });
+            //   $($('<span>').text($audio.attr('src'))).insertBefore($audio);
+            // });
 
-            // Add click listener.
-            $('#play').click(function() {
-              var $button = $(this);    
-              var audio = $button.find('audio')[i]; // <-- Interact with this!
+            // // Add click listener.
+            // $('li').on('click', '#play', function(){
+            //   var $button = $(this);    
+            //   var audio = $button.find('audio')[i]; // <-- Interact with this!
               
-              // Toggle play/pause
-              if (playing !== true) {
-                audio.play();
-              } else {
-                audio.pause();
-              }
+            //   // Toggle play/pause
+            //   if (playing !== true) {
+            //     audio.play();
+            //   } else {
+            //     audio.pause();
+            //   }
 
-              // Flip state
-              $button.toggleClass('playing');
-              playing = !playing
+            //   // Flip state
+            //   $button.toggleClass('playing');
+            //   playing = !playing
             // var files = document.getElementById("active");
-            // var audioElement = document.createElement('audio');
-            // audioElement.setAttribute('src', files.);
+            var audioElement = document.createElement('audio');
+            audioElement.getAttribute('src');
             
-            // audioElement.addEventListener('ended', function() {
-            //     this.play();
-            // }, false);
+            audioElement.addEventListener("timeupdate",function(){
+                $("#currentTime").text(audioElement.currentTime);
+            });
             
-            // audioElement.addEventListener("timeupdate",function(){
-            //     $("#currentTime").text(audioElement.currentTime);
-            // });
+            $('#play').click(function() {
+                audioElement.play();
+                $("#status").text("Status: Playing");
+            });
             
-            // $('#play').click(function() {
-            //     audioElement.play();
-            //     $("#status").text("Status: Playing");
-            // });
-            
-            // $('#pause').click(function() {
-            //     audioElement.pause();
-            //     $("#status").text("Status: Paused");
+            $('#pause').click(function() {
+                audioElement.pause();
+                $("#status").text("Status: Paused");
             });
           
 
