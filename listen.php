@@ -48,13 +48,14 @@
             //   playing = !playing
             // var files = document.getElementById("active");
             var audioElement = document.createElement('audio');
-            audioElement.getAttribute('src');
+            
             
             audioElement.addEventListener("timeupdate",function(){
                 $("#currentTime").text(audioElement.currentTime);
             });
             
             $('#play').click(function() {
+                audioElement.getgetAttribute('src');
                 audioElement.play();
                 $("#status").text("Status: Playing");
             });
