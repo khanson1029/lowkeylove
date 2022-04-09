@@ -180,8 +180,7 @@ h4 {
 
 #myaccount-playlist,audio{background-color: #5b5c5e; width:400px;padding:20px;}
 #listen-playlist,audio{width:400px;padding:20px;}
-.active :hover {color: #c9b351;text-decoration:none;}
-.toggle-play :hover {color: #c9b351;text-decoration:none;}
+
 
 #logo-main {
     display:flex;
@@ -356,7 +355,7 @@ ol, ul {
   position: relative;
   height: 10px;
   border: 3px solid #0000;
-  border-left: 13px solid white;
+  border-left: 1px solid white;
   stroke-width: 4%;
   margin-right: 50%;
 }
