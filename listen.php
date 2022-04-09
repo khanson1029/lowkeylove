@@ -100,7 +100,7 @@
        });
     </script> -->
     <div id="mp3-playlist">
-      <ul id="playlist">
+      <ul id="listen-playlist">
       <?php 
           $dao = new Dao();
           $songArr = $dao->getMpegs();
@@ -116,7 +116,7 @@
                       </div>
                       <div class="controls">
                         <div class="play-container">
-                        <button id="pause<?php echo $count; ?>"></button>
+                        <button class="stop" id="pause<?php echo $count; ?>"></button>
                         <div class="toggle-play play" id="play<?php echo $count; ?>" >    
                                 <a class="mp3-listen-object-container" href="
                                   <?php echo $song['mp3_location'];?>">

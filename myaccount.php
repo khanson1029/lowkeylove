@@ -43,7 +43,7 @@
     <div class="post-title" id="Login2">
         <h4 class="mp3-upload">My Songs</h4>
     </div>
-    <ul id="playlist">
+    <ul id="myaccount-playlist">
         <li class="active">
             <a href="https://www.archive.org/download/bolero_69/Bolero.mp3">
                     Ravel Bolero
