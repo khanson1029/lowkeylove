@@ -344,7 +344,7 @@ ol, ul {
   height: 0;
   width: 0;
   border: 7px solid #0000;
-  border-left: 13px solid white;
+  border-left: 13px solid #c9b351;
 }
 .audio-player .controls .toggle-play.play:hover {
   transform: scale(1.1);
@@ -362,10 +362,6 @@ ol, ul {
 .stop:hover {
   transform: scale(1.1);
 } 
-
-/* .audio-player .controls .toggle-play.pause:hover {
-  transform: scale(1.1);
-} */
 
 .audio-player .controls .time {
   display: flex;

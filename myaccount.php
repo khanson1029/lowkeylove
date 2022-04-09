@@ -51,7 +51,7 @@
             $count = 0;
             foreach($songArr as $song){
                 echo '<li class="active"> 
-                            <a href="Listen.php">' . $song['song_name'] . '</a>
+                            <a href="listen.php">' . $song['song_name'] . '</a>
                       </li>';
             }
             ?>

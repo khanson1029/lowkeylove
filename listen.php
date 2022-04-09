@@ -41,64 +41,9 @@
               });
 
               count++;
-            });
-            //  // Add file names.
-            // $('#play').each(function() {
-            //   var $button = $(this);    
-            //   var $audio = $button.find('audio');
-              
-            //   $($('<span>').text($audio.attr('src'))).insertBefore($audio);
-            // });
-
-            // // Add click listener.
-            // $('li').on('click', '#play', function(){
-            //   var $button = $(this);    
-            //   var audio = $button.find('audio')[i]; // <-- Interact with this!
-              
-            //   // Toggle play/pause
-            //   if (playing !== true) {
-            //     audio.play();
-            //   } else {
-            //     audio.pause();
-            //   }
-
-            //   // Flip state
-            //   $button.toggleClass('playing');
-            //   playing = !playing
-            // var files = document.getElementById("active");
-            // var audioElement = document.createElement('audio');
-            
-            
-            // audioElement.addEventListener("timeupdate",function(){
-            //     $("#currentTime").text(audioElement.currentTime);
-            // });
-            
-            // $('#play').click(function() {
-            //     audioElement.getAttribute('src');
-            //     audioElement.play();
-            //     $("#status").text("Status: Playing");
-            // });
-            
-            // $('#pause').click(function() {
-            //     audioElement.pause();
-            //     $("#status").text("Status: Paused");
-            // });
-          
-
+            });  
       });
     </script>
-    <!-- <script type="text/javascript">
-       $(document).ready(function(){
-       var audioElement = new Audio(); 
-
-       $("ul li").hover(function(){
-        nav_audio.play();
-       },
-      function(){
-         nav_audio.load();
-        });
-       });
-    </script> -->
     <div id="mp3-playlist">
       <ul id="listen-playlist">
       <?php 
@@ -118,11 +63,7 @@
                         <div class="play-container">
                         <button class="stop" id="pause<?php echo $count; ?>"></button>
                         <div class="toggle-play play" id="play<?php echo $count; ?>" >    
-                                <a class="mp3-listen-object-container" href="
-                                  <?php echo $song['mp3_location'];?>">
-                                      <audio src="<?php echo $song['mp3_location'];?>" type="audio/mpeg"></source>
-                                      </audio>
-                                </a>
+                            <audio src="<?php echo $song['mp3_location'];?>" type="audio/mpeg"></source></audio>
                         </div>
                         </div>
                         <!-- <div class="time" id="currentTime">
@@ -134,10 +75,6 @@
                         <div class="volume-container">
                           <div class="volume-button">
                             <div class="volume icono-volumeMedium"></div>
-                          </div>
-                          
-                          <div class="volume-slider">
-                            <div class="volume-percentage"></div>
                           </div>
                         </div>
                       </div>
