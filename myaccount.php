@@ -44,26 +44,17 @@
         <h4 class="mp3-upload">My Songs</h4>
     </div>
     <ul id="myaccount-playlist">
-        <li class="active">
-            <a href="https://www.archive.org/download/bolero_69/Bolero.mp3">
-                    Ravel Bolero
-            </a>
-        </li>
-        <li>
-            <a href="https://www.archive.org/download/MoonlightSonata_755/Beethoven-MoonlightSonata.mp3">
-                    Moonlight Sonata - Beethoven
-            </a>
-        </li>
-        <li>
-            <a href="https://www.archive.org/download/CanonInD_261/CanoninD.mp3">
-                    Canon in D Pachabel
-            </a>
-        </li>
-        <li>
-            <a href="https://www.archive.org/download/PatrikbkarlChamberSymph/PatrikbkarlChamberSymph_vbr_mp3.zip">
-                    patrikbkarl chamber symph
-            </a>
-        </li>
+        <?php 
+            $dao = new Dao();
+            $songArr = $dao->getMpegs();
+            echo $songArr['mp3_location'];
+            $count = 0;
+            foreach($songArr as $song){
+                echo '<li class="active"> 
+                            <a href="Listen.php">' . $song['song_name'] . '</a>
+                      </li>';
+            }
+            ?>
     </ul>
     <div class="post-title" id="Login2">
         <h4 class="mp3-upload">No Songs? Upload!</h4>
