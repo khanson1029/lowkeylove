@@ -35,7 +35,7 @@
                 // I need to put something here to make all the other songs pause/reset //
               });
 
-              $('.stop' + count).click(function(){
+              $('#pause' + count).click(function(){
                 audioElement.pause();
                 audioElement.currentTime = 0;
               });
@@ -116,7 +116,7 @@
                       </div>
                       <div class="controls">
                         <div class="play-container">
-                        <!-- <button id="pause"></button> -->
+                        <button id="pause<?php echo $count; ?>"></button>
                         <div class="toggle-play play" id="play<?php echo $count; ?>" >    
                                 <a class="mp3-listen-object-container" href="
                                   <?php echo $song['mp3_location'];?>">
