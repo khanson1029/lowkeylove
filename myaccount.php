@@ -56,7 +56,7 @@
                           </li>';
                 }
             }else{
-                echo '<li class="active"> Nothing Here Yet!</li>';
+                echo '<li class="active2"> <a href="myaccount.php">Nothing Here Yet!</a></li>';
             }
             ?>
     </ul>

@@ -301,9 +301,7 @@ ol, ul {
   margin-top: 0;
   margin-bottom: 10px;
 }
-.active1:hover{
-  color:#c9b351;
-}
+.active1:hover{color: #c9b351;text-decoration:none;}
 /* css for music player*/
 .audio-player {
   height: 50px;
