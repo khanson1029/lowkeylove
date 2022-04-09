@@ -49,10 +49,14 @@
             $songArr = $dao->getMpegs();
             echo $songArr['mp3_location'];
             $count = 0;
-            foreach($songArr as $song){
-                echo '<li class="active"> 
-                            <a href="listen.php">' . $song['song_name'] . '</a>
-                      </li>';
+            if(!empty($songArr)){
+                foreach($songArr as $song){
+                    echo '<li class="active1"> 
+                                <a href="listen.php">' . $song['song_name'] . '</a>
+                          </li>';
+                }
+            }else{
+                echo '<li class="active"> Nothing Here Yet!</li>';
             }
             ?>
     </ul>

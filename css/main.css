@@ -301,6 +301,9 @@ ol, ul {
   margin-top: 0;
   margin-bottom: 10px;
 }
+.active1:hover{
+  color:#c9b351;
+}
 /* css for music player*/
 .audio-player {
   height: 50px;
@@ -318,7 +321,7 @@ ol, ul {
   grid-template-rows: 6px auto;
 }
 .audio-player .timeline {
-  background: white;
+  background: #c9b351;
   width: 100%;
   position: relative;
   cursor: pointer;
